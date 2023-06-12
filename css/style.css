@@ -1,0 +1,268 @@
+:root {
+    --text-color1: gold;
+    --text-color2: red;
+    --text-color3: white;
+    --text-colot4: gold;
+    --text-color2hover: hsl(0, 37%, 50%);
+    --backgroundColor1: rgb(4, 23, 54);
+    --backgroundColor2: rgb(1, 11, 28);
+}
+
+body {
+ background-color: var(--backgroundColor2);
+}
+
+header {
+    padding: clamp(29px, 4.2vw, 50px) 0;
+    background: var(--backgroundColor1);
+    }
+
+header h1 {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-color1);
+    text-align: center;
+}
+
+nav {
+    padding: clamp(20px, 2.5vw, 30px) 0 10px 0;
+    max-width: 1600px;
+    margin: 0 auto;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    font-size: clamp(12px, 1.6vw, 20px);
+    color: var(--text-color2);
+    text-transform: uppercase;
+    transition: transform 500ms, color 500ms;
+}
+
+nav a:hover,
+nav a:focus {
+    transform: scale(1.2);
+    color: var(--text-color2hover);
+    outline: transparent;
+}
+
+nav a::before {
+    content: '';
+    border-bottom: 3px solid var(--text-color2hover);
+    position: absolute;
+    top: 0;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform ease 400ms;
+}
+
+nav a:hover::before,
+nav a:focus::before {
+    content: '';
+    transform: scaleX(1);
+
+}
+
+img {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    aspect-ratio: 16 / 9;
+}
+
+#wyk, #kon {
+    padding: clamp(24px, 3.4vw, 40px) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#wyk h2, #kon h2 {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-color3);
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    flex-basis: 20%;
+
+}
+#wyk div, #kon div{
+    flex-basis: 77%;
+}
+#wyk p {
+    font-size: clamp(14px, 2vw, 24px);
+    padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
+    color: var(--text-color3);
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#wyk p::first-letter {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-colot4);
+}
+
+#kon p {
+    font-size: clamp(14px, 2vw, 24px);
+    padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
+    color: var(--text-color3);
+    line-height: 1.5;
+    text-align: justify;
+    display: block;
+}
+
+#kon p::first-letter {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-colot4);
+}
+
+#kon span {
+    font-size: clamp(20px, 2.5vw, 30px);
+}
+
+#frontend {
+    padding: clamp(24px, 3.4vw, 40px) 0;
+
+}
+
+#frontend h2 {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-color3);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#frontend div {
+    display: grid;
+    place-content: center;
+}
+
+#frontend a {
+    font-size: clamp(14px, 2vw, 24px);
+    color: var(--text-color3);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em;
+}
+
+#frontend p::first-letter {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-colot4);
+}
+
+#backend {
+    padding: clamp(24px, 3.4vw, 40px) 0;
+}
+
+#backend h2 {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-color3);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#backend p {
+    font-size: 25px;
+    padding: clamp(24px, 3.4vw, 40px) 0;
+    color: var(--text-color3);
+    line-height: 1.5;
+    text-align: center;
+    display: block;
+}
+
+#backend p::first-letter {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-colot4);
+}
+#backend a{
+    color: var(--text-color2);
+}
+#backend a:hover{
+    color: var(--text-color1);
+}
+
+footer {
+    background: var(--backgroundColor1);
+    padding: clamp(12px, 1.6vw, 20px) 0;
+}
+
+footer small {
+    font-size: clamp(10px, 1.3vw, 15px);
+    color: var(--text-color1);
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    img {
+    display: block;
+}
+#wyk, #kon {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+}
+/*--------------*/
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --color1: #0e4b50;
+    --color2: #2d8f85;
+    --color3: #637c54;
+}
+
+
+.card {
+    background: var(--backgroundColor2);
+    margin: clamp(24px, 3.4vw, 40px) 0;
+    border-radius: 1em;
+    position: relative;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    inset: -1rem;
+    z-index: -1;
+
+    background: conic-gradient(from var(--gradient-angle, 0deg),
+            var(--color1),
+            var(--color2),
+            var(--color3),
+            var(--color2),
+            var(--color1));
+
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+}
+
+
+.card::after {
+    filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
