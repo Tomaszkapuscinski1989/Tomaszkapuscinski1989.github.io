@@ -12,13 +12,17 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ani.css">
+
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Tomasz Kapuściński - <span>Portfolio</span></h1>
+    <header class="header">
         <nav>
-            <ul>
+            <h1><span class="small">mgr inż.</span> Tomasz Kapuściński - <span class="small">portfolio</span></h1>
+            <div class="ham menu"></div>
+            <ul class="hiden" id="nav">
                 <li> <a href="#wyk">wykształcenie</a> </li>
                 <li> <a href="#kon">Kontakt</a> </li>
                 <li> <a href="#frontend">Frondend</a> </li>
@@ -27,7 +31,12 @@
         </nav>
     </header>
 
-    <img src="img/marc-mintel-Q-ioK6NPFos-unsplash.jpg" alt="przykładowe zdjęcie" loading="lazy">
+    <section class="main-img">
+        <h3 class="hiden">Fotografia poglądowa</h3>
+            <div>
+                <h2>portfoli</h2>
+            </div>
+        </section>
 
     <main>
 
@@ -39,7 +48,7 @@
                     Ukończone z tytułem magistra.</p>
                 <p>Politechnika Wrocławska studia stacjonarne na wydziale Elektroniki Mikrosystemów i Fotoniki kierunek
                     Elektronika i Telekomunikacja. Ukończone z tytułem inżyniera.
-                    Doświadczenie zawo</p>
+                    </p>
             </div>
 
         </section>
@@ -65,7 +74,27 @@
 
         </section>
     </main>
+
     <footer>
+        <section class="footer">
+            <h3 class="hiden">Stopka</h3>
+        <div>
+            <ul class="f1">
+                <li> <a href="#wyk">wykształcenie</a> </li>
+                <li> <a href="#kon">Kontakt</a> </li>
+                <li> <a href="#frontend">Frondend</a> </li>
+                <li> <a href="#backend">programowanie</a> </li>
+            </ul>
+        </div>
+
+            <ul class="f2">
+                <li> <i class="ri-mail-send-line"></i>Email: <span>tomasz.kapuscinski1989@wp.pl</span></li>
+                <li> <i class="ri-github-fill"></i> <a href="https://github.com/Tomaszkapuscinski1989" target="_blank">GitHub</a></li>
+            </ul>
+
+
+        </section>
+        <hr>
         <small><i class="ri-copyright-line"></i>Tomasz Kapuściński 2023</small>
     </footer>
 </body>
