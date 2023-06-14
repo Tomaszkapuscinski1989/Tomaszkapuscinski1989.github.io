@@ -232,12 +232,12 @@ header h1 {
     color: var(--text-color3);
     text-transform: uppercase;
     text-align: center;
-    flex-basis: 10%;
+    flex-basis: 20%;
 
 
 }
 #wyk div, #kon div{
-    flex-basis: 87%;
+    flex-basis: 77%;
 }
 #wyk p {
     font-size: clamp(14px, 2vw, 24px);
