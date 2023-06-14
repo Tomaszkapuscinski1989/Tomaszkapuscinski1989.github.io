@@ -8,54 +8,117 @@
     --backgroundColor2: rgb(1, 11, 28);
 }
 
-body {
- background-color: var(--backgroundColor2);
+:root {
+    --hamburgerBackground: white;
+    --menuLineColor: gold;
+    --headerColor1: black;
+    --headerColor1Hover: white;
+
+}
+
+html {
+    font-size: 10px;
 }
 
 header {
-    padding: clamp(29px, 4.2vw, 50px) 0;
-    background: var(--backgroundColor1);
-    }
-
-header h1 {
-    font-size: clamp(20px, 2.5vw, 30px);
-    color: var(--text-color1);
-    text-align: center;
+    width: 100%;
+    background-color: var(--backgroundColor1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    z-index: 998;
 }
 
-nav {
-    padding: clamp(20px, 2.5vw, 30px) 0 10px 0;
+header>nav {
     max-width: 1600px;
-    margin: 0 auto;
-
-}
-
-nav ul {
+    background-color: var(--backgroundColor1);
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
+    padding: clamp(2.2rem, 3vw, 4rem) clamp(1.6rem, 2.3vw, 3rem);
+    position: relative;
+
+}
+header.scroll>nav {
+    padding: clamp(0.7rem, 1vw, 1.3rem) clamp(0.5rem, 0.7vw, 1rem);
+    transition: padding 500ms;
 }
 
-nav a {
-    font-size: clamp(12px, 1.6vw, 20px);
-    color: var(--text-color2);
+
+header>nav>h1 {
+    color: var(--text-color1);
     text-transform: uppercase;
+    font-size: clamp(1.6rem, 2.3vw, 3rem);
+    font-weight: bold;
+}
+
+.ham {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--hamburgerBackground);
+    border-radius: 5px;
+    position: absolute;
+    top: 25%;
+    left: 90%;
+    cursor: pointer;
+}
+
+.ham::before, .ham::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    background-color: var(--hamburgerBackground);
+    position: absolute;
+}
+
+header>nav>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: clamp(4.4rem, 6vw, 8rem);
+    left: 0;
+    right: 0;
+    transform-origin: top center;
+    background-color: var(--backgroundColor1);
+    animation: showMenu 500ms ease forwards;
+}
+
+header nav ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px var(--menuLineColor) solid;
+}
+
+header nav ul li a {
+    color: var(--text-color1);
+    text-transform: capitalize;
+    font-size: clamp(1.4rem, 1.9vw, 2.5rem);
+    margin: 1em 0;
+    padding: 0.5em 0;
+    text-align: center;
     transition: transform 500ms, color 500ms;
 }
 
-nav a:hover,
-nav a:focus {
+
+header nav ul li a:hover,
+header nav ul li a:focus {
     transform: scale(1.2);
-    color: var(--text-color2hover);
+    color: var(--headerColor1Hover);
     outline: transparent;
 }
 
-nav a::before {
+header nav ul li a::before {
     content: '';
-    border-bottom: 3px solid var(--text-color2hover);
+    border-bottom: 3px solid var(--headerColor1Hover);
     position: absolute;
     top: 0;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     right: 0;
     transform: scaleX(0);
@@ -63,19 +126,95 @@ nav a::before {
     transition: transform ease 400ms;
 }
 
-nav a:hover::before,
-nav a:focus::before {
+header nav ul li a:hover::before,
+header nav ul li a:focus::before {
     content: '';
     transform: scaleX(1);
+}
+
+.hiden {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+
+    .ham {
+        display: none;
+    }
+
+    header nav ul li {
+        border-bottom: none;
+    }
+
+    header nav ul li a {
+        margin: 1em 0.7em 1em 0;
+    }
+
+    header ul.hiden {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 
 }
 
-img {
-    display: none;
+body {
+ background-color: var(--backgroundColor2);
+}
+
+
+header h1 {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-color1);
+    }
+
+.main-img {
+    background-image: url(../img/marc-mintel-Q-ioK6NPFos-unsplash.jpg);
+    background-size: cover;
     margin: 0 auto;
     width: 100%;
     max-width: 1600px;
     aspect-ratio: 16 / 9;
+    position: relative;
+    display: none;
+    isolation: isolate;
+}
+
+.main-img div{
+    position: relative;
+    width: 10%;
+    transition: width 500ms ease;
+}
+.main-img div:hover{
+    position: relative;
+    width: 30%;
+}
+
+.main-img div::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(107, 62, 2);
+    z-index: -1;
+    inset: 0;
+    mix-blend-mode: multiply;
+
+}
+.main-img div h2{
+    position: absolute;
+    top: 20%;
+    left:35%;
+    padding: 10px;
+    border-radius: 5px;
+    color: green;
+    text-transform: uppercase;
+    font-size: clamp(29px, 4.2vw, 50px);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: var(--text-color1);
 }
 
 #wyk, #kon {
@@ -92,13 +231,13 @@ img {
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--text-color3);
     text-transform: uppercase;
-    position: sticky;
-    top: 0;
-    flex-basis: 20%;
+    text-align: center;
+    flex-basis: 10%;
+
 
 }
 #wyk div, #kon div{
-    flex-basis: 77%;
+    flex-basis: 87%;
 }
 #wyk p {
     font-size: clamp(14px, 2vw, 24px);
@@ -191,21 +330,66 @@ img {
 #backend a:hover{
     color: var(--text-color1);
 }
-
+/* stopka */
 footer {
     background: var(--backgroundColor1);
     padding: clamp(12px, 1.6vw, 20px) 0;
+}
+div.footer{
+    display: flex;
+}
+.footer{
+display: flex;
+justify-content: space-around;
+max-width: 1600px;
+margin: 0 auto;
+}
+.f1, .f2{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: space-around;
+padding: clamp(12px, 1.6vw, 20px) 0;
+color: var(--text-color1);
+font-size: clamp(14px, 2vw, 24px);
+line-height: 1.5em;
+}
+.footer a, .footer span, .footer i{
+    color: var(--text-color1);
+    font-size: clamp(14px, 2vw, 24px);
+    text-transform: uppercase;
+    transform: scale(1);
+    transition: color 500ms, transform 500ms;
+
+}
+
+.footer a:hover,
+.footer a:focus{
+    color: var(--text-color2);
+    outline: transparent;
+    transform: scale(1.2);
+    }
+
+footer hr{
+ border-color: var(--text-color1);
 }
 
 footer small {
     font-size: clamp(10px, 1.3vw, 15px);
     color: var(--text-color1);
     text-align: center;
+    margin: clamp(14px, 2vw, 24px) 0;
+}
+.small{
+    text-transform: lowercase;
 }
 
 @media screen and (min-width: 800px) {
-    img {
-    display: block;
+    #wyk h2, #kon h2 {
+        position: sticky;
+    }
+    .main-img {
+    display: flex;
 }
 #wyk, #kon {
     align-items: flex-start;
@@ -249,7 +433,7 @@ footer small {
             var(--color1));
 
     border-radius: inherit;
-    animation: rotation 20s linear infinite;
+    animation: rotation 10s linear infinite;
 }
 
 
