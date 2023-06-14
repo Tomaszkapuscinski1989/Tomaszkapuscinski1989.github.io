@@ -6,6 +6,8 @@
     --text-color2hover: hsl(0, 37%, 50%);
     --backgroundColor1: rgb(4, 23, 54);
     --backgroundColor2: rgb(1, 11, 28);
+
+    --font-family1: 'Libre Baskerville', serif;
 }
 
 :root {
@@ -23,7 +25,7 @@ html {
 header {
     width: 100%;
     background-color: var(--backgroundColor1);
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -51,7 +53,7 @@ header.scroll>nav {
 
 header>nav>h1 {
     color: var(--text-color1);
-    text-transform: uppercase;
+
     font-size: clamp(1.6rem, 2.3vw, 3rem);
     font-weight: bold;
 }
@@ -101,6 +103,7 @@ header nav ul li a {
     font-size: clamp(1.4rem, 1.9vw, 2.5rem);
     margin: 1em 0;
     padding: 0.5em 0;
+    font-family: var(--font-family1);
     text-align: center;
     transition: transform 500ms, color 500ms;
 }
@@ -164,13 +167,20 @@ header nav ul li a:focus::before {
 
 body {
  background-color: var(--backgroundColor2);
+ font-family: 'Libre Baskerville', serif;
+
 }
 
 
 header h1 {
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--text-color1);
+    text-transform: lowercase;
+    font-family: var(--font-family1);
     }
+    span.small{
+    text-transform: uppercase;
+}
 
 .main-img {
     background-image: url(../img/marc-mintel-Q-ioK6NPFos-unsplash.jpg);
@@ -182,6 +192,7 @@ header h1 {
     position: relative;
     display: none;
     isolation: isolate;
+    margin-top: clamp(4.4rem, 6vw, 8rem);
 }
 
 .main-img div{
@@ -215,6 +226,7 @@ header h1 {
     writing-mode: vertical-rl;
     text-orientation: upright;
     color: var(--text-color1);
+    font-family: var(--font-family1);
 }
 
 #wyk, #kon {
@@ -233,6 +245,7 @@ header h1 {
     text-transform: uppercase;
     text-align: center;
     flex-basis: 20%;
+    font-family: var(--font-family1);
 
 
 }
@@ -280,6 +293,7 @@ header h1 {
     color: var(--text-color3);
     text-transform: uppercase;
     text-align: center;
+    font-family: var(--font-family1);
 }
 
 #frontend div {
@@ -309,6 +323,7 @@ header h1 {
     color: var(--text-color3);
     text-transform: uppercase;
     text-align: center;
+    font-family: var(--font-family1);
 }
 
 #backend p {
@@ -352,12 +367,13 @@ justify-content: space-around;
 padding: clamp(12px, 1.6vw, 20px) 0;
 color: var(--text-color1);
 font-size: clamp(14px, 2vw, 24px);
-line-height: 1.5em;
+line-height: 1.7em;
 }
 .footer a, .footer span, .footer i{
     color: var(--text-color1);
     font-size: clamp(14px, 2vw, 24px);
     text-transform: uppercase;
+    font-family: var(--font-family1);
     transform: scale(1);
     transition: color 500ms, transform 500ms;
 
@@ -379,9 +395,7 @@ footer small {
     color: var(--text-color1);
     text-align: center;
     margin: clamp(14px, 2vw, 24px) 0;
-}
-.small{
-    text-transform: lowercase;
+    font-family: var(--font-family1);
 }
 
 @media screen and (min-width: 800px) {
