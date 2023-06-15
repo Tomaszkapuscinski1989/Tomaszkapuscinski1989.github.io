@@ -1,4 +1,4 @@
-::root {
+:root {
     --text-color1: gold;
     --text-color2: red;
     --text-color3: white;
@@ -435,4 +435,3 @@ footer small {
     flex-direction: row;
 }
 }
-
