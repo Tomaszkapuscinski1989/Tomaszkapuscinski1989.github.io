@@ -1,4 +1,4 @@
-:root {
+::root {
     --text-color1: gold;
     --text-color2: red;
     --text-color3: white;
@@ -8,14 +8,11 @@
     --backgroundColor2: rgb(1, 11, 28);
 
     --font-family1: 'Libre Baskerville', serif;
-}
 
-:root {
     --hamburgerBackground: white;
     --menuLineColor: gold;
     --headerColor1: black;
     --headerColor1Hover: white;
-
 }
 
 html {
@@ -164,7 +161,7 @@ header nav ul li a:focus::before {
     }
 
 }
-
+/*----------nagowek-------------*/
 body {
  background-color: var(--backgroundColor2);
  font-family: 'Libre Baskerville', serif;
@@ -228,8 +225,11 @@ header h1 {
     color: var(--text-color1);
     font-family: var(--font-family1);
 }
+main{
+    margin-top: clamp(39px, 4.8vw, 60px);
+}
 
-#wyk, #kon {
+#wyk, #kon , #cer, #skill{
     padding: clamp(24px, 3.4vw, 40px) 0;
     display: flex;
     align-items: center;
@@ -239,20 +239,20 @@ header h1 {
     margin: 0 auto;
 }
 
-#wyk h2, #kon h2 {
+#wyk h2, #kon h2, #cer h2, #skill h2{
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--text-color3);
     text-transform: uppercase;
     text-align: center;
-    flex-basis: 20%;
+    flex-basis: 25%;
     font-family: var(--font-family1);
 
 
 }
-#wyk div, #kon div{
-    flex-basis: 77%;
+#wyk div, #kon div, #cer div, #skill div{
+    flex-basis: 70%;
 }
-#wyk p {
+#wyk p, #kon p, #cer p{
     font-size: clamp(14px, 2vw, 24px);
     padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
     color: var(--text-color3);
@@ -260,32 +260,47 @@ header h1 {
     text-align: justify;
 }
 
-#wyk p::first-letter {
+#skill ul li {
+    font-size: clamp(14px, 2vw, 24px);
+    padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
+    color: var(--text-color3);
+    line-height: 1.5;
+    text-align: justify;
+}
+#cer ul li a {
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-color3);
+    text-transform: uppercase;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: var(--font-family1);
+    transform: scale(1);
+    transition: color 500ms, transform 500ms;
+}
+
+#cer ul li a:hover,
+#cer ul li a:focus{
+    color: var(--text-color2);
+    outline: transparent;
+    transform: scale(1.2);
+    }
+
+#wyk p::first-letter,
+#kon p::first-letter,
+#cer li a::first-letter,
+#skill li::first-letter,
+#backend p::first-letter,
+#frontend p::first-letter{
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--text-colot4);
 }
 
 #kon p {
-    font-size: clamp(14px, 2vw, 24px);
-    padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
-    color: var(--text-color3);
-    line-height: 1.5;
-    text-align: justify;
     display: block;
-}
-
-#kon p::first-letter {
-    font-size: clamp(20px, 2.5vw, 30px);
-    color: var(--text-colot4);
 }
 
 #kon span {
     font-size: clamp(20px, 2.5vw, 30px);
-}
-
-#frontend {
-    padding: clamp(24px, 3.4vw, 40px) 0;
-
 }
 
 #frontend h2 {
@@ -296,23 +311,13 @@ header h1 {
     font-family: var(--font-family1);
 }
 
-#frontend div {
-    display: grid;
-    place-content: center;
-}
+
 
 #frontend a {
-    font-size: clamp(14px, 2vw, 24px);
-    color: var(--text-color3);
-    text-transform: uppercase;
-    text-align: center;
-    padding: 1em;
+
 }
 
-#frontend p::first-letter {
-    font-size: clamp(20px, 2.5vw, 30px);
-    color: var(--text-colot4);
-}
+
 
 #backend {
     padding: clamp(24px, 3.4vw, 40px) 0;
@@ -326,25 +331,46 @@ header h1 {
     font-family: var(--font-family1);
 }
 
-#backend p {
-    font-size: 25px;
+#frontend div,
+#backend div {
     padding: clamp(24px, 3.4vw, 40px) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+#frontend p,
+#backend p {
+    font-size: clamp(14px, 2vw, 24px);
     color: var(--text-color3);
     line-height: 1.5;
-    text-align: center;
+    text-align: justify;
     display: block;
+    flex-basis: 70%;
 }
 
-#backend p::first-letter {
-    font-size: clamp(20px, 2.5vw, 30px);
-    color: var(--text-colot4);
-}
+#frontend a,
 #backend a{
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: var(--text-color3);
+    text-transform: uppercase;
+    text-align: center;
+    flex-basis: 25%;
+    font-family: var(--font-family1);
+    transform: scale(1);
+    transition: color 500ms, transform 500ms;
+}
+#frontend a:hover,
+#frontend a:focus,
+#backend a:hover,
+#backend a:focus{
     color: var(--text-color2);
-}
-#backend a:hover{
-    color: var(--text-color1);
-}
+    outline: transparent;
+    transform: scale(1.2);
+    }
+
 /* stopka */
 footer {
     background: var(--backgroundColor1);
@@ -399,68 +425,14 @@ footer small {
 }
 
 @media screen and (min-width: 800px) {
-    #wyk h2, #kon h2 {
-        position: sticky;
-    }
+
     .main-img {
     display: flex;
 }
-#wyk, #kon {
+#wyk, #kon , #cer, #skill, #frontend div, #backend div {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
 }
 }
-/*--------------*/
-@property --gradient-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
 
-:root {
-    --color1: #0e4b50;
-    --color2: #2d8f85;
-    --color3: #637c54;
-}
-
-
-.card {
-    background: var(--backgroundColor2);
-    margin: clamp(24px, 3.4vw, 40px) 0;
-    border-radius: 1em;
-    position: relative;
-}
-
-.card::before,
-.card::after {
-    content: "";
-    position: absolute;
-    inset: -1rem;
-    z-index: -1;
-
-    background: conic-gradient(from var(--gradient-angle, 0deg),
-            var(--color1),
-            var(--color2),
-            var(--color3),
-            var(--color2),
-            var(--color1));
-
-    border-radius: inherit;
-    animation: rotation 10s linear infinite;
-}
-
-
-.card::after {
-    filter: blur(3.5rem);
-}
-
-@keyframes rotation {
-    0% {
-        --gradient-angle: 0deg;
-    }
-
-    100% {
-        --gradient-angle: 360deg;
-    }
-}
