@@ -56,8 +56,8 @@ header>nav>h1 {
 }
 
 .ham {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border: 2px solid var(--hamburgerBackground);
     border-radius: 5px;
     position: absolute;
@@ -68,10 +68,18 @@ header>nav>h1 {
 
 .ham::before, .ham::after {
     content: "";
-    width: 15px;
-    height: 3px;
+    width: 10px;
+    height: 2px;
     background-color: var(--hamburgerBackground);
     position: absolute;
+}
+.ham::before {
+    top: 20%;
+    left: 20%;
+}
+.ham::after{
+    top: 60%;
+    left: 20%;
 }
 
 header>nav>ul {
@@ -135,6 +143,7 @@ header nav ul li a:focus::before {
 .hiden {
     display: none;
 }
+
 
 @media screen and (min-width: 800px) {
 
@@ -246,6 +255,7 @@ main{
     text-align: center;
     flex-basis: 25%;
     font-family: var(--font-family1);
+    padding-bottom: clamp(20px, 2.5vw, 30px);
 
 
 }
@@ -311,14 +321,6 @@ main{
     font-family: var(--font-family1);
 }
 
-
-
-#frontend a {
-
-}
-
-
-
 #backend {
     padding: clamp(24px, 3.4vw, 40px) 0;
 }
@@ -382,6 +384,7 @@ div.footer{
 .footer{
 display: flex;
 justify-content: space-around;
+flex-direction: column;
 max-width: 1600px;
 margin: 0 auto;
 }
@@ -402,7 +405,6 @@ line-height: 1.7em;
     font-family: var(--font-family1);
     transform: scale(1);
     transition: color 500ms, transform 500ms;
-
 }
 
 .footer a:hover,
@@ -434,4 +436,8 @@ footer small {
     justify-content: flex-start;
     flex-direction: row;
 }
+.footer{
+flex-direction: row;
+}
+
 }
