@@ -16,6 +16,9 @@
     --linearGradient1: #12c2e9;
     --linearGradient2: #c471ed;
     --linearGradient3: #f64f59;
+
+    --max-width1: 1200px;
+    --max-width2: 1400px;
 }
 
 .dark {
@@ -33,7 +36,7 @@
 
 .width1200 {
     margin: 0 auto;
-    max-width: 1500px;
+    max-width: var(--max-width1);
 }
 
 body {
@@ -81,13 +84,14 @@ body {
 header {
     background-color: var(--backgroundColor1);
     padding: clamp(5px, 0.8vw, 10px) 0;
-    width: 100vw;
+    width: 100%;
     z-index: 3;
 }
 
 header .icon {
     display: flex;
     justify-content: end;
+    max-width: var(--max-width2);
 }
 
 header .icon i {
@@ -99,11 +103,12 @@ header .icon i:hover {
     cursor: pointer;
 }
 
-header nav {
+header nav.pad.width1200 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: clamp(12px, 1.6vw, 20px) 0;
+    max-width: var(--max-width2);
 
 }
 
@@ -272,7 +277,7 @@ img {
     display: none;
     margin: 0 auto;
     width: 100%;
-    max-width: 1600px;
+    max-width: var(--max-width2);
     aspect-ratio: 16 / 9;
 }
 
@@ -537,7 +542,7 @@ body#body.main-body .kon p {
 /* Stopka*/
 .footer {
     background-color: var(--backgroundColor1);
-    width: 100vw;
+    width: 100%;
 }
 
 .footer section.width1200 {

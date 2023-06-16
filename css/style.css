@@ -13,10 +13,15 @@
     --menuLineColor: gold;
     --headerColor1: black;
     --headerColor1Hover: white;
+
+    --max-width1: 1200px;
+    --max-width2: 1400px;
 }
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 15rem;
 }
 
 header {
@@ -31,7 +36,7 @@ header {
 }
 
 header>nav {
-    max-width: 1400px;
+    max-width: var(--max-width2);
     background-color: var(--backgroundColor1);
     display: flex;
     flex-direction: row;
@@ -193,7 +198,7 @@ header h1 {
     background-size: cover;
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--max-width1);
     aspect-ratio: 16 / 9;
     position: relative;
     display: none;
@@ -244,7 +249,7 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: var(--max-width1);
     margin: 0 auto;
 }
 
@@ -340,7 +345,7 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: var(--max-width1);
     margin: 0 auto;
 }
 #frontend p,
@@ -385,7 +390,7 @@ div.footer{
 display: flex;
 justify-content: space-around;
 flex-direction: column;
-max-width: 1400px;
+max-width: var(--max-width2);
 margin: 0 auto;
 }
 .f1, .f2{
