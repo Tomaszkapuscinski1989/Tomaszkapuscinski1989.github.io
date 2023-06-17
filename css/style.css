@@ -1,6 +1,6 @@
 :root {
     --text-color1: gold;
-    --text-color2: red;
+    --text-color2: white;
     --text-color3: white;
     --text-colot4: gold;
     --text-color2hover: hsl(0, 37%, 50%);
@@ -71,7 +71,8 @@ header>nav>h1 {
     cursor: pointer;
 }
 
-.ham::before, .ham::after {
+.ham::before,
+.ham::after {
     content: "";
     width: 10px;
     height: 2px;
@@ -119,8 +120,7 @@ header nav ul li a {
 }
 
 
-header nav ul li a:hover,
-header nav ul li a:focus {
+header nav ul li :is(a:hover, a:focus) {
     transform: scale(1.2);
     color: var(--headerColor1Hover);
     outline: transparent;
@@ -253,7 +253,7 @@ main{
     margin: 0 auto;
 }
 
-#wyk h2, #kon h2, #cer h2, #skill h2{
+:is(#wyk, #kon, #cer, #skill) h2{
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--text-color3);
     text-transform: uppercase;
@@ -264,10 +264,10 @@ main{
 
 
 }
-#wyk div, #kon div, #cer div, #skill div{
+:is(#wyk, #kon, #cer, #skill) div{
     flex-basis: 70%;
 }
-#wyk p, #kon p, #cer p{
+:is(#wyk, #kon, #cer) p{
     font-size: clamp(14px, 2vw, 24px);
     padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
     color: var(--text-color3);
@@ -293,19 +293,15 @@ main{
     transition: color 500ms, transform 500ms;
 }
 
-#cer ul li a:hover,
-#cer ul li a:focus{
+#cer ul li :is(a:hover, a:focus){
     color: var(--text-color2);
     outline: transparent;
     transform: scale(1.2);
     }
 
-#wyk p::first-letter,
-#kon p::first-letter,
-#cer li a::first-letter,
-#skill li::first-letter,
-#backend p::first-letter,
-#frontend p::first-letter{
+:is(#wyk, #kon, #backend, #frontend) p::first-letter,
+:is(#cer, #skill) li a::first-letter, li::first-letter
+{
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--text-colot4);
 }
@@ -338,8 +334,7 @@ main{
     font-family: var(--font-family1);
 }
 
-#frontend div,
-#backend div {
+:is(#frontend, #backend) div {
     padding: clamp(24px, 3.4vw, 40px) 0;
     display: flex;
     align-items: center;
@@ -348,8 +343,7 @@ main{
     max-width: var(--max-width1);
     margin: 0 auto;
 }
-#frontend p,
-#backend p {
+:is(#frontend, #backend) p {
     font-size: clamp(14px, 2vw, 24px);
     color: var(--text-color3);
     line-height: 1.5;
@@ -358,8 +352,7 @@ main{
     flex-basis: 70%;
 }
 
-#frontend a,
-#backend a{
+:is(#frontend, #backend) a{
 
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--text-color3);
@@ -370,10 +363,8 @@ main{
 
     transition: color 500ms, transform 500ms;
 }
-#frontend a:hover,
-#frontend a:focus,
-#backend a:hover,
-#backend a:focus{
+#frontend :is(a:hover, a:focus),
+#backend :is(a:hover, a:focus){
     color: var(--text-color2);
     outline: transparent;
     transform: scale(1.2);
@@ -394,6 +385,7 @@ flex-direction: column;
 max-width: var(--max-width2);
 margin: 0 auto;
 }
+
 .f1, .f2{
     display: flex;
     flex-direction: column;
@@ -404,7 +396,7 @@ color: var(--text-color1);
 font-size: clamp(14px, 2vw, 24px);
 line-height: 1.7em;
 }
-.footer a, .footer span, .footer i{
+.footer :is(a, span, i){
     color: var(--text-color1);
     font-size: clamp(14px, 2vw, 24px);
     text-transform: uppercase;
@@ -413,8 +405,7 @@ line-height: 1.7em;
     transition: color 500ms, transform 500ms;
 }
 
-.footer a:hover,
-.footer a:focus{
+.footer :is(a:hover, a:focus){
     color: var(--text-color2);
     outline: transparent;
     transform: scale(1.2);
@@ -437,7 +428,7 @@ footer small {
     .main-img {
     display: flex;
 }
-#wyk, #kon , #cer, #skill, #frontend div, #backend div {
+#wyk, #kon , #cer, #skill, :is(#frontend, #backend) div {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
