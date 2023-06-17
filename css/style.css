@@ -360,13 +360,14 @@ main{
 
 #frontend a,
 #backend a{
+
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--text-color3);
     text-transform: uppercase;
     text-align: center;
     flex-basis: 25%;
     font-family: var(--font-family1);
-    transform: scale(1);
+
     transition: color 500ms, transform 500ms;
 }
 #frontend a:hover,
