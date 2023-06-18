@@ -1,8 +1,8 @@
-* {
+:where(*) {
     box-sizing: border-box;
 }
 
-html,
+:where(html,
 body,
 div,
 span,
@@ -82,7 +82,7 @@ summary,
 time,
 mark,
 audio,
-video {
+video) {
     margin: 0;
     padding: 0;
     border: 0;
@@ -91,7 +91,7 @@ video {
     vertical-align: baseline;
 }
 
-article,
+:where(article,
 aside,
 details,
 figcaption,
@@ -101,7 +101,7 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section) {
     display: block;
 }
 
@@ -110,40 +110,38 @@ ul {
     list-style: none;
 }
 
-blockquote,
-q {
+:where(blockquote, q) {
     quotes: none;
 }
 
-blockquote:before,
+:where(blockquote:before,
 blockquote:after,
 q:before,
-q:after {
+q:after) {
     content: '';
     content: none;
 }
 
-table {
+:where(table) {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-p,
-a {
+:where(p, a) {
     text-decoration: none;
     display: inline-block;
 }
 
-small {
+:where(small) {
     display: block;
 }
 
-body {
+:where(body) {
     line-height: 1;
     background-color: black;
 }
 
-html {
+:where(html) {
     scroll-behavior: smooth;
     font-size: 10px;
 }

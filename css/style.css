@@ -175,7 +175,7 @@ header nav ul li a:focus::before {
     }
 
 }
-/*----------nagowek-------------*/
+/*----------nagłowek-------------*/
 body {
  background-color: var(--backgroundColor2);
  font-family: 'Libre Baskerville', serif;
@@ -203,6 +203,7 @@ header h1 {
     position: relative;
     display: none;
     isolation: isolate;
+    overflow: hidden;
     margin-top: clamp(4.4rem, 6vw, 8rem);
 }
 
@@ -236,8 +237,17 @@ header h1 {
     font-size: clamp(29px, 4.2vw, 50px);
     writing-mode: vertical-rl;
     text-orientation: upright;
-    color: var(--text-color1);
+    color: var(--text-color2hover);
     font-family: var(--font-family1);
+    transform: translateX(-300px);
+    transition: color 500ms, transform 500ms;
+}
+
+.main-img div:hover h2{
+
+    color: var(--text-color1);
+    transform: translateX(0);
+
 }
 main{
     margin-top: clamp(39px, 4.8vw, 60px);
@@ -358,6 +368,7 @@ main{
     color: var(--text-color3);
     text-transform: uppercase;
     text-align: center;
+    line-height: 1.5;
     flex-basis: 25%;
     font-family: var(--font-family1);
 
