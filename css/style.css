@@ -46,11 +46,9 @@ header>nav {
     padding: clamp(2.2rem, 3vw, 4rem) clamp(1.6rem, 2.3vw, 3rem);
     position: relative;
     transition: padding 500ms;
-
 }
 header.scroll>nav {
     padding: clamp(0.7rem, 1vw, 1.3rem) clamp(0.5rem, 0.7vw, 1rem);
-
 }
 
 header>nav>h1 {
@@ -190,6 +188,12 @@ header nav ul li a:focus::before {
         left: 0;
         right: 0;
     }
+
+
+header.scroll>nav>ul {
+    top: 0;
+}
+
 
 }
 /*----------nagłowek-------------*/

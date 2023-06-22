@@ -1,8 +1,8 @@
 :root {
-    --textColor1: #0ffaa5;
+    --textColor1: hsl(158, 96%, 52%);
     --textColor2: #fff;
-    --textColor3: #000000;
-    --textColor5: #000000;
+    --textColor3: hsl(0, 0%, 25%);
+    --textColor5: hsl(158, 96%, 22%);
     --backgroundColor1: #464141;
     --backgroundColor2: hsl(0, 2%, 70%);
     --font1Heder: 'Roboto', sans-serif;
@@ -22,8 +22,9 @@
 }
 
 .dark {
-    --textColor3: #fff;
-    --textColor5: #0ffaa5;
+    --textColor1: hsl(158, 96%, 52%);
+    --textColor3: hsl(0, 0%, 75%);
+    --textColor5: hsl(158, 96%, 52%);
     --backgroundColor2: hsl(0, 2%, 15%);
     --linearGradient1: #12c2e9;
     --linearGradient2: #c471ed;
@@ -337,6 +338,7 @@ main h2 {
 .kon p {
     display: block;
     text-align: justify;
+    line-height: 1.5;
     font-size: clamp(12px, 1.6vw, 20px);
     margin-bottom: clamp(12px, 1.6vw, 20px);
     padding: 0  clamp(5px, 0.8vw, 10px);
