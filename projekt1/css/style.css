@@ -1,10 +1,10 @@
 :root {
     --textColor1: hsl(158, 96%, 52%);
     --textColor2: #fff;
-    --textColor3: hsl(0, 0%, 25%);
+    --textColor3: hsl(0, 0%, 45%);
     --textColor5: hsl(158, 96%, 22%);
     --backgroundColor1: #464141;
-    --backgroundColor2: hsl(0, 2%, 70%);
+    --backgroundColor2: hsl(0, 0%, 90%);
     --font1Heder: 'Roboto', sans-serif;
     --tableBackground1: hsl(0, 4%, 40%);
     --tableBackground2: hsl(0, 4%, 50%);
@@ -282,14 +282,59 @@ img {
     aspect-ratio: 16 / 9;
 }
 
+.mainSiteImg{
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--max-width2);
+    aspect-ratio: 16 / 9;
+}
+
 .maska {
     -webkit-mask-image: linear-gradient(black 60%, transparent);
     mask-image: linear-gradient(black 60%, transparent);
 }
+.maska2{
+-webkit-mask-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, 1) 40%, transparent 100%);
+mask-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, 1) 40%, transparent 100%);
+}
+
 
 #main {
     color: var(--textColor3);
 }
+
+main.home-main{
+    display: flex;
+    flex-direction: column;
+    padding: clamp(48px, 6.8vw, 80px) clamp(5px, 0.8vw, 10px);
+}
+
+main.home-main div{
+
+    padding: 0 clamp(12px, 1.6vw, 20px);
+}
+main.home-main div h1{
+    line-height: 1;
+    margin: clamp(24px, 3.4vw, 40px) 0;
+    font-family: var(--font1Heder);
+    font-weight: 700;
+    font-size: clamp(24px, 3.4vw, 40px);
+    text-transform: uppercase;
+    color: var(--textColor5);
+    text-align: center;
+}
+main.home-main div p{
+    display: block;
+    text-align: justify;
+    line-height: 1.8;
+    color: var(--textColor3);
+    font-size: clamp(12px, 1.6vw, 20px);
+    margin-bottom: clamp(12px, 1.6vw, 20px);
+    padding: 0  clamp(5px, 0.8vw, 10px);
+
+}
+
 
 main h1,
 main h2 {
@@ -410,7 +455,7 @@ section.legenda li.noPad {
 
 /*  tabela */
 section.table {
-    max-width: 1600px;
+    max-width: var(--max-width2);
     margin: 50px auto;
 }
 
@@ -529,6 +574,13 @@ body#body.main-body .kon p {
         display: block;
     }
 
+    .mainSiteImg{
+    display: block;
+}
+main.home-main{
+    display: flex;
+    flex-direction: row;
+}
     #main section.kon,
     #main article.kon,
     .ofertaSection {
