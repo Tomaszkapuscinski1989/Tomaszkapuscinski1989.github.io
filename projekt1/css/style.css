@@ -386,10 +386,11 @@ section.legenda li.noPad {
 }
 
 .skos {
-    margin: 5rem 0;
+    margin: 5rem auto;
     position: relative;
-    width: 100vw;
+    width: 100%;
     padding: 3rem 0;
+    max-width: var(--max-width2);
 }
 
 .skos::after {

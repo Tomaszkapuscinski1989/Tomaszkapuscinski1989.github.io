@@ -28,12 +28,12 @@
 
     .slideL {
         opacity: 0;
-        transform: translateX(-300px);
+        transform: translateX(-200px);
     }
 
     .slideR {
         opacity: 0;
-        transform: translateX(300px);
+        transform: translateX(200px);
     }
 }
 
