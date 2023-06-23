@@ -304,7 +304,7 @@ main{
     padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
     color: var(--text-color3);
     line-height: 1.8;
-    text-align: justify;
+    text-align: center;
 }
 
 #skill ul li {
@@ -312,7 +312,7 @@ main{
     padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
     color: var(--text-color3);
     line-height: 1.5;
-    text-align: justify;
+    text-align: center;
 }
 #cer ul li a {
     font-size: clamp(20px, 2.5vw, 30px);
@@ -455,6 +455,16 @@ footer small {
     .main-img {
     display: flex;
 }
+
+:is(#wyk, #kon, #cer) p{
+
+    text-align: justify;
+    }
+
+    #skill ul li {
+    text-align: justify;
+}
+
 #wyk, #kon , #cer, #skill, :is(#frontend, #backend) div {
     align-items: flex-start;
     justify-content: flex-start;
