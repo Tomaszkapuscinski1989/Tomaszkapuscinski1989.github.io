@@ -23,6 +23,10 @@
     opacity: 0;
     transform: translateX(30px);
 }
+.slideD {
+    opacity: 0;
+    transform: translateY(30px);
+}
 
 @media screen and (min-width: 800px) {
 
@@ -35,11 +39,22 @@
         opacity: 0;
         transform: translateX(200px);
     }
+
+    .slideD {
+    opacity: 0;
+    transform: translateY(200px);
+}
 }
 
 .slideIn2 {
     opacity: 1;
     transform: translateX(0);
+    transition: opacity 300ms, transform 500ms;
+}
+
+    .slideD2 {
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 300ms, transform 500ms;
 }
 

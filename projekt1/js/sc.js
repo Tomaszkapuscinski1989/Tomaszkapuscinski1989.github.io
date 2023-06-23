@@ -42,4 +42,27 @@ const obs2 = new IntersectionObserver(function (entrys, obs2) {
 slideIn.forEach(f => {
     obs2.observe(f)
 })
+///////////////////////////////////////////////////////////////////////////////
 
+
+const slideD = document.querySelectorAll('.slideD');
+
+const ops3 = {
+    root: null,
+    threshold: 0,
+    rootMargin: '-100px 0px -100px 0px'
+};
+
+const obs3 = new IntersectionObserver(function (entrys, obs3) {
+    entrys.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return
+        }
+        entry.target.classList.add('slideD2')
+        obs3.unobserve(entry.target)
+    })
+}, ops3);
+
+slideD.forEach(f => {
+    obs3.observe(f)
+})
