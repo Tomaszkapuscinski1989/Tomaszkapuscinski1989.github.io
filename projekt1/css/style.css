@@ -323,6 +323,7 @@ main.home-main div h1{
     text-transform: uppercase;
     color: var(--textColor5);
     text-align: center;
+    letter-spacing: .2em;
 }
 main.home-main div p{
     display: block;
@@ -345,6 +346,7 @@ main h2 {
     text-transform: uppercase;
     color: var(--textColor5);
     text-align: center;
+    letter-spacing: .5em;
 }
 
 main h2 {
@@ -704,7 +706,9 @@ main.home-main{
 }
 
 
-.footer hr {}
+.footer hr {
+    border: 3px solid var(--textColor1);
+}
 
 .footer small {
     display: block;
