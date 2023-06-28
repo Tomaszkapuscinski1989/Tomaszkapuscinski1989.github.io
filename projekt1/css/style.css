@@ -175,7 +175,7 @@ header nav ul a:focus {
 
 header nav ul a::before {
     content: '';
-    border-bottom: 3px solid var(--textColor1);
+    border-bottom: 5px solid var(--textColor1);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -184,9 +184,6 @@ header nav ul a::before {
     transform: scaleX(0);
     transform-origin: center;
     transition: transform ease 400ms;
-    -moz-transition: transform ease 400ms;
-    -webkit-transition: transform ease 400ms;
-    -o-transition: transform ease 400ms;
 }
 
 header nav ul li a:hover::before,
@@ -594,16 +591,18 @@ main.home-main{
 .footer {
     background-color: var(--backgroundColor1);
     width: 100%;
+    padding-top: clamp(12px, 1.7vw, 20px);
 }
 
 .footer section.width1200 {
     display: flex;
+
     justify-content: space-around;
     padding: clamp(17px, 2.5vw, 30px) 0;
 }
 
 .footer .footerSectionMap {
-    display: none;
+    display: block;
 }
 
 .footer h3#mapa-strony {
@@ -622,6 +621,7 @@ main.home-main{
     font-size: clamp(14px, 2vw, 24px);
     color: var(--textColor2);
     line-height: 1.2em;
+
 }
 
 
@@ -715,9 +715,11 @@ main.home-main{
 }
 
 @media screen and (min-width: 800px) {
+
     .footer .footerSectionMap {
         display: block;
     }
 }
+
 
 /*stopka koniec*/
