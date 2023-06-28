@@ -351,7 +351,7 @@ main h2 {
     text-transform: uppercase;
     color: var(--textColor5);
     text-align: center;
-    letter-spacing: .5em;
+    letter-spacing: .3em;
 }
 
 main h2 {
@@ -582,6 +582,11 @@ main.home-main{
     .pading-left {
         padding-left: 2.5em;
     }
+
+    main h1,
+    main h2 {
+    letter-spacing: .5em;
+}
 
 }
 
