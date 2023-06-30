@@ -43,6 +43,7 @@
 body {
     background-color: var(--backgroundColor2);
     scroll-behavior: smooth;
+
 }
 
 .hiden {
@@ -102,6 +103,14 @@ header .icon i {
 
 header .icon i:hover {
     cursor: pointer;
+}
+
+@supports (display: flex) {
+    header .icon {
+        max-width: var(--max-width2);
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 header nav.pad.width1200 {
@@ -389,7 +398,7 @@ main h2 {
     text-align: justify;
     line-height: 1.5;
     font-size: clamp(12px, 1.6vw, 20px);
-    margin-bottom: clamp(12px, 1.6vw, 20px);
+    margin: 0 clamp(5px, 0.8vw, 10px) clamp(12px, 1.6vw, 20px) clamp(5px, 0.8vw, 10px);
     padding: 0  clamp(5px, 0.8vw, 10px);
 
 }
@@ -517,16 +526,18 @@ tbody tr:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: clamp(29px, 4.2vw, 50px) 0;
+    margin: clamp(29px, 4.2vw, 50px) clamp(5px, 0.8vw, 10px);
 }
 
 .ofertaSection a {
     margin: clamp(17px, 2.5vw, 30px) 0;
 }
 
+@media (hover: hover) {
 .ofertaSection a:hover {
     transform: scale(1.2);
     transition: transform 500ms;
+}
 }
 
 .ofertaSection a figure {
