@@ -39,10 +39,14 @@
     margin: 0 auto;
     max-width: var(--max-width1);
 }
-
+html{
+    font-size: 10px;
+    scroll-padding: 10rem;
+}
 body {
     background-color: var(--backgroundColor2);
     scroll-behavior: smooth;
+
 
 }
 
@@ -117,9 +121,8 @@ header nav.pad.width1200 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: clamp(12px, 1.6vw, 20px) 0;
+    padding: clamp(12px, 1.6vw, 20px) clamp(5px, 0.8vw, 10px);
     max-width: var(--max-width2);
-
 }
 
 header nav>a {
@@ -556,9 +559,16 @@ tbody tr:hover {
 }
 
 @media (hover: hover) {
-.ofertaSection a:hover {
+.ofertaSection a:hover,
+.ofertaSection a:focus
+ {
     transform: scale(1.2);
     transition: transform 500ms;
+}
+.ofertaSection a:focus
+ {
+    outline: 4px dashed var(--textColor1);
+    outline-offset:-15px;
 }
 }
 
