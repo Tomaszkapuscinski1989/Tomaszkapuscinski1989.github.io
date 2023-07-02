@@ -281,7 +281,7 @@ header nav ul li a:focus::before {
 /* nagłówek koniec*/
 
 img {
-    display: none;
+
     margin: 0 auto;
     width: 100%;
     max-width: var(--max-width2);
@@ -304,6 +304,27 @@ img {
     -webkit-mask-image: radial-gradient(circle farthest-corner at 50% 50%, black 50%, transparent 80%);
     mask-image: radial-gradient(circle farthest-corner at 50% 50%, black 50%, transparent 80%);
 }
+
+/*   slider */
+.swiper {
+
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-width2);
+  aspect-ratio: 16 / 9;
+  }
+div.swiper-slid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+div.swiper-slide img{
+      width: 100%;
+      height: 100%;
+    }
+/*   slider  main page */
 
 #main {
     color: var(--textColor3);
@@ -377,6 +398,7 @@ main h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
 }
 
 .kon div {
@@ -734,3 +756,4 @@ main.home-main{
 
 
 /*stopka koniec*/
+
