@@ -72,4 +72,24 @@ const obs2 = new IntersectionObserver(function (entrys, obs2) {
 slideIn.forEach(f => {
     obs2.observe(f)
 })
+//////////////////////////////////////////////////
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+    loop: true,
+    centeredSlides: true,
+
+ autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+
+});
 

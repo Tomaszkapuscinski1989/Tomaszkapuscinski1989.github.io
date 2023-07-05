@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Tomasz Kapuściński">
     <meta name="description" content="Tomasz Kapuściński - Portfolio">
-    <meta name="keywords" content="html, html5, css, css3, js, pyton, port folio, frontend, front end">
+    <meta name="keywords" content="html, html5, css, css3, js, pyton, portfolio, port folio, frontend, front end">
     <title>Tomasz Kapuściński - Portfolio</title>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="css/ani.css">
 
     <script src="js/main.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,17 +34,49 @@
                 <li> <a href="#wyk">CV</a> </li>
                 <li> <a href="#kon">Kontakt</a> </li>
                 <li> <a href="#frontend">Frontend</a> </li>
-                <li> <a href="#backend">programowanie</a> </li>
+                <li> <a href="#backend">Backend</a> </li>
             </ul>
         </nav>
     </header>
 
-    <section class="main-img">
+
+<div class="swiper">
+
+  <div class="swiper-wrapper">
+     <div class="swiper-slide">
+        <section class="main-img img3">
         <h3 class="hiden">Fotografia poglądowa</h3>
             <div>
                 <h2>portfoli</h2>
+                <p>mgr inż. Tomasz Kapuściński</p>
             </div>
         </section>
+    </div>
+    <div class="swiper-slide">
+        <section class="main-img img1">
+        <h3 class="hiden">Fotografia poglądowa</h3>
+            <div>
+                <h2>Frontend</h2>
+                 <p>html, css, java script</p>
+            </div>
+        </section>
+
+</div>
+    <div class="swiper-slide">
+        <section class="main-img img2">
+        <h3 class="hiden">Fotografia poglądowa</h3>
+            <div>
+                <h2>Backend</h2>
+                <p>python, sql lite</p>
+            </div>
+        </section>
+    </div>
+
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+</div>
 
     <main>
 
@@ -114,7 +149,7 @@
                 <li> <a href="#wyk">CV</a> </li>
                 <li> <a href="#kon">Kontakt</a> </li>
                 <li> <a href="#frontend">Frontend</a> </li>
-                <li> <a href="#backend">programowanie</a> </li>
+                <li> <a href="#backend">Backend</a> </li>
             </ul>
         </div>
 

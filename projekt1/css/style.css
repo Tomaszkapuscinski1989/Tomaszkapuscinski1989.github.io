@@ -310,7 +310,6 @@ img {
 
 /*   slider */
 .swiper {
-
   margin: 0 auto;
   width: 100%;
   max-width: var(--max-width2);
@@ -559,16 +558,17 @@ tbody tr:hover {
 }
 
 @media (hover: hover) {
+
 .ofertaSection a:hover,
-.ofertaSection a:focus
- {
+.ofertaSection a:focus {
     transform: scale(1.2);
     transition: transform 500ms;
 }
-.ofertaSection a:focus
- {
+
+.ofertaSection a:focus {
     outline: 4px dashed var(--textColor1);
     outline-offset:-15px;
+    transition: outline-offset 500ms;
 }
 }
 
