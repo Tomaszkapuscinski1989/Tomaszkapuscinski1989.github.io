@@ -434,7 +434,8 @@ main{
     }
 
 :is(#wyk, #kon) p::first-letter,
-:is(#cer, #skill) :is(li::first-letter, li a::first-letter)
+:is(#cer, #skill) li::first-letter,
+:is(#cer, #skill) li a::first-letter
 {
     font-size: clamp(20px, 2.5vw, 30px);
     color: var(--firstLeter);

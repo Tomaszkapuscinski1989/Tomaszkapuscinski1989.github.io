@@ -4,7 +4,6 @@ const menu = document.getElementsByClassName('menu')
 
 menu[0].addEventListener('click', () => {
     nav.classList.toggle('hiden')
-    console.log("dajsgdjsa")
 })
 
 /*-----------------------------------------------------*/

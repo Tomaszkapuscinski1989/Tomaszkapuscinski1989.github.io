@@ -24,3 +24,11 @@ sun[0].addEventListener('click', () => {
     body.classList.remove('dark')
 })
 
+////////////////////////////////////////////
+const navHeader = document.querySelector('nav ul li a')
+const nav1 = document.getElementById('nav')
+
+
+navHeader.addEventListener('click', () => {
+    nav1.classList.toggle('hiden')
+})
