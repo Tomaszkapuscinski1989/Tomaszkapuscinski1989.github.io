@@ -25,10 +25,21 @@ sun[0].addEventListener('click', () => {
 })
 
 ////////////////////////////////////////////
-const navHeader = document.querySelector('nav ul li a')
+const navHeader = document.querySelectorAll('nav ul li a')
 const nav1 = document.getElementById('nav')
 
 
-navHeader.addEventListener('click', () => {
+if (screen.width < 800){
+for (var i = 0; i <= navHeader.length - 1; i++) {
+
+    navHeader[i].addEventListener('click', () => {
     nav1.classList.toggle('hiden')
 })
+}
+}
+
+const header = document.querySelector('.header').offsetHeight
+
+console.log(header)
+
+document.documentElement.style.setProperty('--scrollPadding', header + 'px')

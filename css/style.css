@@ -65,7 +65,7 @@
 html {
     font-size: 10px;
     scroll-behavior: smooth;
-    scroll-padding-top: 15rem;
+    scroll-padding-top: var(--scrollPadding, 15rem);
 }
 
 header {
@@ -459,9 +459,6 @@ main{
      padding: clamp(106px, 12.6vw, 150px) 0;
 }
 
-#backend {
-    padding: clamp(24px, 3.4vw, 40px) 0;
-}
 
 :is(#frontend, #backend)>div {
     padding: clamp(24px, 3.4vw, 40px) 0;
