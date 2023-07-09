@@ -105,10 +105,12 @@ header>nav>h1>a {
     transition: font-size 500ms, transform 500ms;
 }
 
+@media screen and (hover: hover) {
 header>nav>h1 :is(a:hover, a:focus) {
     transform: scale(1.2);
     color: var(--headerFoterColor1hover);
     outline: transparent;
+}
 }
 
 header.scroll>nav>h1>a {
@@ -122,10 +124,12 @@ header>nav>h1>i {
     transition: font-size 500ms, transform 500ms;
 }
 
+@media screen and (hover: hover) {
 header>nav>h1 :is(i:hover, i:focus) {
     transform: scale(1.2);
     color: var(--headerFoterColor1hover);
     outline: transparent;
+}
 }
 
 header.scroll>nav>h1>i {
@@ -207,6 +211,7 @@ header.scroll nav ul li a {
     font-size: clamp(1.2rem, 1.6vw, 2rem);
     }
 
+@media screen and (hover: hover) {
 header nav ul li :is(a:hover, a:focus) {
     transform: scale(1.2);
     color: var(--headerFoterColor1hover);
@@ -230,6 +235,7 @@ header nav ul li a:hover::before,
 header nav ul li a:focus::before {
     content: '';
     transform: scaleX(1);
+}
 }
 
 .hiden {
@@ -269,8 +275,10 @@ header.scroll>nav>h1>a{
     color: var(--headerFoterColor1Scroll);
 }
 
+@media screen and (hover: hover) {
 header.scroll>nav>h1>:is(a:hover, a:focus){
     color: var(--headerFoterColor1hoverScroll);
+}
 }
 
 header.scroll nav ul li a {
@@ -278,13 +286,14 @@ header.scroll nav ul li a {
     font-size: clamp(1.2rem, 1.6vw, 2rem);
     }
 
+@media screen and (hover: hover) {
 header nav ul li :is(a:hover, a:focus) {
     color: var(--headerFoterColor1hoverScroll);
     }
 
 header nav ul li a::before {
     border-bottom: 3px solid var(--headerFoterColor1hoverScroll);
-
+}
 }
 
 header>nav>ul{
@@ -429,11 +438,13 @@ main{
     transition: color 500ms, transform 500ms;
 }
 
+@media screen and (hover: hover) {
 #cer ul li :is(a:hover, a:focus){
     color: var(--textColor3hover);
     outline: transparent;
     transform: scale(1.2);
     }
+}
 
 :is(#wyk, #kon) p::first-letter,
 :is(#cer, #skill) li::first-letter,
@@ -508,11 +519,13 @@ line-height: 1.7em;
     transition: color 500ms, transform 500ms;
 }
 
+@media screen and (hover: hover) {
 .footer :is(a:hover, a:focus){
     color: var(--headerFoterColor1hover);
     outline: transparent;
     transform: scale(1.2);
     }
+}
 
 footer hr{
  border-color: var(--headerFoterColor1);
