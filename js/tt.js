@@ -40,6 +40,37 @@ for (var i = 0; i <= navHeader.length - 1; i++) {
 
 const header = document.querySelector('.header').offsetHeight
 
-console.log(header)
+
 
 document.documentElement.style.setProperty('--scrollPadding', header + 'px')
+
+
+const resizeObserver = new ResizeObserver(() => {
+
+  console.log(screen.width);
+  if (screen.width < 800){
+
+for (var i = 0; i <= navHeader.length - 1; i++) {
+
+    navHeader[i].addEventListener('click', () => {
+    nav1.classList.add('hiden')
+    console.log(screen.width);
+})
+}
+}
+else {
+
+    for (var i = 0; i <= navHeader.length - 1; i++) {
+
+    navHeader[i].removeEventListener('click', () => {
+    nav1.classList.add('hiden')
+})
+}
+}
+
+});
+
+const n = document.querySelector('html')
+resizeObserver.observe(n);
+
+

@@ -75,7 +75,9 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    left: 0;
     font-weight: bold;
+    margin: 0 auto;
     z-index: 998;
     transition: background-color 500ms;
 }
@@ -137,7 +139,7 @@ header.scroll>nav>h1>i {
     border-radius: 5px;
     position: absolute;
     top: 25%;
-    left: 90%;
+    right: 10%;
     cursor: pointer;
     transition: top 500ms;
 }
