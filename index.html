@@ -18,25 +18,24 @@
     <script src="js/main.js" defer></script>
     <script src="js/tt.js" defer></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body id="body">
     <header class="header">
         <nav>
-            <h1>
-                <a href="#">Tomasz Kapuściński</a>
-                <i class="ri-contrast-2-line moon"></i>
-                <i class="ri-sun-line sun"></i>
-            </h1>
+            <i class="ri-contrast-2-line moon"></i>
+            <i class="ri-sun-line sun"></i>
             <div class="ham menu"></div>
             <ul class="hiden" id="nav">
-                <li> <a href="#wyk">CV</a> </li>
+                <li> <a href="#wyk">wykształcenie</a> </li>
+                <li> <a href="#cer">Certifikaty</a> </li>
+                <li> <a href="#skill">umiejętności</a> </li>
                 <li> <a href="#kon">Kontakt</a> </li>
                 <li> <a href="#frontend">Frontend</a> </li>
                 <li> <a href="#backend">Backend</a> </li>
@@ -45,55 +44,57 @@
     </header>
 
 
-<div class="swiper">
+    <div class="swiper">
 
-  <div class="swiper-wrapper">
-     <div class="swiper-slide">
-        <section class="main-img img3">
-        <h3 class="hiden">Fotografia poglądowa</h3>
-            <div>
-                <h2>portfoli</h2>
-                <p>mgr inż. Tomasz Kapuściński</p>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <section class="main-img img3">
+                    <h3 class="hiden">Fotografia poglądowa</h3>
+                    <div>
+                        <h2>portfoli</h2>
+                        <p>mgr inż. Tomasz Kapuściński</p>
+                    </div>
+                </section>
             </div>
-        </section>
+            <div class="swiper-slide">
+                <section class="main-img img1">
+                    <h3 class="hiden">Fotografia poglądowa</h3>
+                    <div>
+                        <h2>Frontend</h2>
+                        <p>html, css, java script</p>
+                    </div>
+                </section>
+
+            </div>
+            <div class="swiper-slide">
+                <section class="main-img img2">
+                    <h3 class="hiden">Fotografia poglądowa</h3>
+                    <div>
+                        <h2>Backend</h2>
+                        <p>python, sqlite</p>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
     </div>
-    <div class="swiper-slide">
-        <section class="main-img img1">
-        <h3 class="hiden">Fotografia poglądowa</h3>
-            <div>
-                <h2>Frontend</h2>
-                 <p>html, css, java script</p>
-            </div>
-        </section>
-
-</div>
-    <div class="swiper-slide">
-        <section class="main-img img2">
-        <h3 class="hiden">Fotografia poglądowa</h3>
-            <div>
-                <h2>Backend</h2>
-                <p>python, sql lite</p>
-            </div>
-        </section>
-    </div>
-
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-</div>
 
     <main>
 
         <section id="wyk">
             <h2 class="Slide slideL">wykształcenie</h2>
             <div>
-                <p class="Slide slideR">Politechnika Wrocławska studia stacjonarne na wydziale Elektroniki Mikrosystemów i Fotoniki kierunek
+                <p class="Slide slideR">Politechnika Wrocławska studia stacjonarne na wydziale Elektroniki Mikrosystemów
+                    i Fotoniki kierunek
                     Elektronika i Telekomunikacja specjalność Optoelektronika i technika światłowodowa.
                     Ukończone z tytułem magistra.</p>
-                <p class="Slide slideR">Politechnika Wrocławska studia stacjonarne na wydziale Elektroniki Mikrosystemów i Fotoniki kierunek
+                <p class="Slide slideR">Politechnika Wrocławska studia stacjonarne na wydziale Elektroniki Mikrosystemów
+                    i Fotoniki kierunek
                     Elektronika i Telekomunikacja. Ukończone z tytułem inżyniera.
-                    </p>
+                </p>
             </div>
 
         </section>
@@ -102,7 +103,9 @@
             <h2 class="Slide slideL">Certifikaty</h2>
             <div class="Slide slideR">
                 <ul>
-                <li><a target="_blank" href="https://freecodecamp.org/certification/fcced8c6ca9-fadb-440e-9b65-ad911e26dd65/responsive-web-design">Freecodecamp - Responsive Web Design</a></li>
+                    <li><a target="_blank"
+                            href="https://freecodecamp.org/certification/fcced8c6ca9-fadb-440e-9b65-ad911e26dd65/responsive-web-design">Freecodecamp
+                            - Responsive Web Design</a></li>
                 </ul>
             </div>
         </section>
@@ -123,13 +126,13 @@
         <section id="kon">
 
             <h2 class="Slide slideL">Kontakt</h2>
-            <div  class="Slide slideR">
+            <div class="Slide slideR">
                 <p><i class="ri-mail-send-line"></i>Email: <span>tomasz.kapuscinski1989@wp.pl</span></p>
             </div>
         </section>
 
-        <section id="frontend">
-            <h2  class="skos">Przykładowe projekty z zakresu frontendu</h2>
+        <section id="frontend" class="skos">
+            <h2>Przykładowe projekty z zakresu frontendu</h2>
             <div>
                 <div class="karta front slideD">
                     <div class="karta-zawartosc">
@@ -147,24 +150,28 @@
                 </div>
             </div>
         </section>
-        <section id="backend">
+        <section id="backend" class="skos skos2">
 
-            <h2 class="skos">Przykładowe projekty z zakresu programowania</h2>
+            <h2>Przykładowe projekty z zakresu programowania</h2>
 
             <div>
 
                 <div class="karta back slideD">
                     <div class="karta-zawartosc">
                         <h3>projekt</h3>
-                        <p>Projekt napisany w języku python i posiadający GUI. w Projekcie wykorzystano między innymi bibliotekę SQLite 3.</p>
-                        <a href="https://github.com/Tomaszkapuscinski1989/Zliczacz_-python-" target="_blank">link do projektu</a>
+                        <p>Projekt napisany w języku python i posiadający GUI. w Projekcie wykorzystano między innymi
+                            bibliotekę SQLite 3.</p>
+                        <a href="https://github.com/Tomaszkapuscinski1989/Zliczacz_-python-" target="_blank">link do
+                            projektu</a>
                     </div>
                 </div>
                 <div class="karta back slideD">
                     <div class="karta-zawartosc">
                         <h3>projekt</h3>
-                        <p>Projekt napisany w języku python i posiadający GUI. w Projekcie wykorzystano między innymi bibliotekę SQLite 3.</p>
-                        <a href="https://github.com/Tomaszkapuscinski1989/Zliczacz_-python-" target="_blank">link do projektu</a>
+                        <p>Projekt napisany w języku python i posiadający GUI. w Projekcie wykorzystano między innymi
+                            bibliotekę SQLite 3.</p>
+                        <a href="https://github.com/Tomaszkapuscinski1989/Zliczacz_-python-" target="_blank">link do
+                            projektu</a>
                     </div>
                 </div>
             </div>
@@ -175,18 +182,21 @@
     <footer>
         <section class="footer">
             <h3 class="hiden">Stopka</h3>
-        <div>
-            <ul class="f1">
-                <li> <a href="#wyk">CV</a> </li>
-                <li> <a href="#kon">Kontakt</a> </li>
-                <li> <a href="#frontend">Frontend</a> </li>
-                <li> <a href="#backend">Backend</a> </li>
-            </ul>
-        </div>
+            <div>
+                <ul class="f1">
+                    <li> <a href="#wyk">wykształcenie</a> </li>
+                    <li> <a href="#cer">Certifikaty</a> </li>
+                    <li> <a href="#skill">umiejętności</a> </li>
+                    <li> <a href="#kon">Kontakt</a> </li>
+                    <li> <a href="#frontend">Frontend</a> </li>
+                    <li> <a href="#backend">Backend</a> </li>
+                </ul>
+            </div>
 
             <ul class="f2">
                 <li> <i class="ri-mail-send-line"></i>Email: <span>tomasz.kapuscinski1989@wp.pl</span></li>
-                <li> <i class="ri-github-fill"></i> <a href="https://github.com/Tomaszkapuscinski1989" target="_blank">GitHub</a></li>
+                <li> <i class="ri-github-fill"></i> <a href="https://github.com/Tomaszkapuscinski1989"
+                        target="_blank">GitHub</a></li>
             </ul>
 
 
