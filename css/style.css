@@ -1,7 +1,7 @@
 :root {
     --headerFoterColor1: hsl(51, 100%, 50%);
     --headerFoterColor1hover: hsl(255, 0%, 100%);
-    --headerFoterColor1Scroll: hsl(217, 86%, 11%);
+    --headerFoterColor1Scroll: hsl(217, 86%, 20%);
     --headerFoterColor1hoverScroll: hsl(255, 0%, 100%);
 
     --firstLeter: hsl(51, 100%, 50%);
@@ -15,8 +15,8 @@
     --text-Color2: hsl(51, 100%, 30%);
     --text-Color3: hsl(0, 0%, 100%);
 
-    --backgroundColor1: hsl(217, 86%, 11%);
-    --backgroundColor1scroll: hsl(217, 86%, 40%);
+    --backgroundColor1: hsl(217, 86%, 45%);
+    --backgroundColor1scroll: var(--backgroundColor1);
     --backgroundColor1scrollBorder: hsl(217, 86%, 11%);
     --backgroundColor1Kart: rgba(4, 23, 54, .7);
     --backgroundColor2: hsl(202, 83%, 65%);
@@ -492,6 +492,7 @@ main {
 /* stopka */
 footer {
     background: var(--backgroundColor1);
+    color: var(--headerFoterColor1Scroll);
     padding: clamp(12px, 1.6vw, 20px) 0;
 }
 
@@ -514,19 +515,22 @@ div.footer {
     align-items: center;
     justify-content: space-around;
     padding: clamp(12px, 1.6vw, 20px) 0;
-    color: var(--headerFoterColor1);
     font-size: clamp(14px, 2vw, 24px);
     line-height: 1.7em;
 }
 
 .footer :is(a, span, i) {
-    color: var(--headerFoterColor1);
     font-size: clamp(14px, 2vw, 24px);
+    color: var(--headerFoterColor1Scroll);
     text-transform: uppercase;
     font-family: var(--font-family1);
     transform: scale(1);
     line-height: 1.8;
     transition: color 500ms, transform 500ms;
+}
+
+.footer i {
+    color: var(--headerFoterColor1);
 }
 
 @media screen and (hover: hover) {
@@ -543,7 +547,6 @@ footer hr {
 
 footer small {
     font-size: clamp(10px, 1.3vw, 15px);
-    color: var(--headerFoterColor1);
     text-align: center;
     margin: clamp(14px, 2vw, 24px) 0;
     font-family: var(--font-family1);
