@@ -1,9 +1,11 @@
 ////////////////////////////////////////////////////////
 const nav = document.getElementById('nav')
 const menu = document.getElementsByClassName('menu')
+const header = document.querySelector('.header')
 
 menu[0].addEventListener('click', () => {
     nav.classList.toggle('hiden')
+    header.classList.toggle('header-color')
 })
 
 /*-----------------------------------------------------*/

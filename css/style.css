@@ -81,7 +81,12 @@ header {
     font-weight: bold;
     margin: 0 auto;
     z-index: 998;
+    background: transparent;
     transition: background-color 500ms;
+}
+
+header.scroll{
+    background: var(--backgroundColor1);
 }
 
 header>nav {
@@ -295,11 +300,14 @@ header.scroll nav ul li a {
         background-color: transparent;
 
     }
-
-
 }
 
-/*----------nagłowek-------------*/
+.header-color{
+    background: var(--backgroundColor1);
+    transition: background 300ms;
+    }
+
+/*----------nagłowekhead-------------*/
 body {
     background-color: var(--backgroundColor2);
     font-family: 'Libre Baskerville', serif;

@@ -29,33 +29,34 @@ const navHeader = document.querySelectorAll('nav ul li a')
 const nav1 = document.getElementById('nav')
 
 
+
 if (screen.width < 800){
 for (var i = 0; i <= navHeader.length - 1; i++) {
 
     navHeader[i].addEventListener('click', () => {
     nav1.classList.toggle('hiden')
+        header.classList.toggle('header-color')
 })
 }
 }
 
-const header = document.querySelector('.header').offsetHeight
+const header1 = document.querySelector('.header').offsetHeight
 
 
 
-document.documentElement.style.setProperty('--scrollPadding', header + 'px')
+document.documentElement.style.setProperty('--scrollPadding', header1 + 'px')
 
 
 const resizeObserver = new ResizeObserver(() => {
 
-  console.log(screen.width);
   if (screen.width < 800){
 
 for (var i = 0; i <= navHeader.length - 1; i++) {
 
     navHeader[i].addEventListener('click', () => {
     nav1.classList.add('hiden')
-    console.log(screen.width);
-})
+        header.classList.toggle('header-color')
+    })
 }
 }
 else {
@@ -64,6 +65,7 @@ else {
 
     navHeader[i].removeEventListener('click', () => {
     nav1.classList.add('hiden')
+        header.classList.toggle('header-color')
 })
 }
 }
