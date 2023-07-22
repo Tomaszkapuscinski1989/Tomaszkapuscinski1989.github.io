@@ -493,6 +493,7 @@ main {
 footer {
     background: var(--backgroundColor1);
     color: var(--headerFoterColor1Scroll);
+    border-top: 5px solid var(--backgroundColor1scrollBorder);
     padding: clamp(12px, 1.6vw, 20px) 0;
 }
 
