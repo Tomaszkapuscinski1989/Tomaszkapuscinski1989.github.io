@@ -585,6 +585,7 @@ tbody tr:hover {
     margin: 0 auto;
     width: 100%;
     aspect-ratio: 16/9;
+    filter: grayscale(100%);
 }
 
 .ofertaSection figcaption {
@@ -597,6 +598,11 @@ tbody tr:hover {
     color: var(--textColor1);
 }
 
+.ofertaSection a:hover figure img,
+.ofertaSection a:focus figure img{
+    filter: grayscale(0%);
+    transition: filter 500ms;
+}
 
 
 @media screen and (min-width: 800px) {
