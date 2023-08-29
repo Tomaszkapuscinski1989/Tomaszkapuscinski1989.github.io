@@ -1,7 +1,7 @@
 :root {
     --headerFoterColor1: hsl(51, 100%, 50%);
     --headerFoterColor1hover: hsl(255, 0%, 100%);
-    --headerFoterColor1Scroll: hsl(217, 86%, 20%);
+    --headerFoterColor1Scroll: hsl(51, 100%, 50%);
     --headerFoterColor1hoverScroll: hsl(255, 0%, 100%);
 
     --firstLeter: hsl(51, 100%, 50%);
@@ -117,6 +117,7 @@ header>nav>i {
         transform: scale(1.2);
         color: var(--headerFoterColor1hover);
         outline: transparent;
+        cursor: pointer;
     }
 }
 
@@ -183,7 +184,7 @@ header.scroll>nav>ul {
 header nav ul li {
     width: 100%;
     text-align: center;
-    border-bottom: 2px var(--menuLineColor) solid;
+    /*border-bottom: 2px var(--menuLineColor) solid;*/
 }
 
 header nav ul li a {
@@ -261,7 +262,7 @@ header.scroll nav ul li a {
 
     header.scroll {
         background-color: var(--backgroundColor1scroll);
-        border-bottom: 5px solid var(--backgroundColor1scrollBorder);
+        /*border-bottom: 5px solid var(--backgroundColor1scrollBorder);*/
 
     }
 
@@ -436,6 +437,7 @@ main {
 
 #cer ul li a {
     font-size: clamp(20px, 2.5vw, 30px);
+    padding: 0 clamp(5px, 0.8vw, 10px) clamp(24px, 3.4vw, 40px);
     color: var(--textColor3);
     text-transform: uppercase;
     line-height: 1.8;
@@ -493,7 +495,6 @@ main {
 footer {
     background: var(--backgroundColor1);
     color: var(--headerFoterColor1Scroll);
-    border-top: 5px solid var(--backgroundColor1scrollBorder);
     padding: clamp(12px, 1.6vw, 20px) 0;
 }
 
