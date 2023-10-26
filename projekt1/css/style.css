@@ -823,7 +823,7 @@ tbody tr:hover {
   margin: auto;
   opacity: 0;
 
-  transition: transform 1000ms, opacity 200ms;
+  transition: transform 1000ms, opacity 1000ms;
 }
 .bazaWiedzy a.przycisk:focus::before,
 .bazaWiedzy a.przycisk:hover::before {
@@ -882,8 +882,8 @@ tbody tr:hover {
   inset: 0;
   margin: auto;
   opacity: 0;
-
-  transition: transform 1000ms, opacity 200ms;
+  transform: scale(1);
+  transition: transform 1000ms, opacity 1000ms;
 }
 .index2 a:focus::before,
 .index2 a:hover::before {
