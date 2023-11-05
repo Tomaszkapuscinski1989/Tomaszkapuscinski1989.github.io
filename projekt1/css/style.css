@@ -405,7 +405,7 @@ main h2 {
 
 }
 
-.kon p::first-letter{
+.kon p:not(.contact p)::first-letter{
     font-size: clamp(20px, 2.9vw, 35px);
 }
 
