@@ -1,0 +1,122 @@
+:root {
+    --textColor1: hsl(158, 96%, 52%);
+    --textColor3: hsl(0, 0%, 75%);
+    --textColor5: hsl(158, 96%, 52%);
+
+    --backgroundColor1: #464141;
+
+    --backgroundColor2: hsl(0, 2%, 15%);
+    --font1Heder: 'Roboto', sans-serif;
+
+
+    --max-width1: 1400px;
+    --max-width2: 1980px;
+
+}
+
+
+html{
+    font-size: 10px;
+    scroll-padding: 10rem;
+}
+body {
+    background: var(--backgroundColor2);
+    scroll-behavior: smooth;
+    margin-bottom: 10rem;
+}
+
+
+img {
+
+
+    width: 100%;
+
+    aspect-ratio: 13 / 4;
+}
+
+.maska {
+    -webkit-mask-image: linear-gradient(black 60%, transparent);
+    mask-image: linear-gradient(black 60%, transparent);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1
+ {
+    margin: clamp(24px, 3.4vw, 40px) 0;
+    font-family: var(--font1Heder);
+    font-weight: 700;
+    font-size: clamp(24px, 3.4vw, 40px);
+    text-transform: uppercase;
+    color: var(--textColor1);
+    text-align: center;
+    letter-spacing: .3em;
+    line-height: 2.1em;
+
+}
+
+
+a.button{
+    font-size: clamp(24px, 3.4vw, 40px);
+    padding: 1.0em 2em;
+
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--font1Heder);
+    letter-spacing: .3em;
+    color: var(--backgroundColor1);
+}
+
+a.button:focus,
+a.button:hover{
+    color: var(--textColor1);
+}
+
+
+.button {
+
+    border: 5px solid var(--backgroundColor1);
+    border-radius: 20px;
+    color: var(--backgroundColor1);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition:color 1000ms, border-color 1000ms;
+}
+
+.button:focus,
+.button:hover{
+    border-color: var(--textColor1);
+    outline: transparent;
+    transition:color 1000ms, border-color 1000ms;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--backgroundColor1);
+  width: 10%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  inset: 0;
+  margin: auto;
+  opacity: 0;
+  transform: scale(1);
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+.button:focus::before,
+.button:hover::before {
+  transform: scale(20);
+  opacity: 1;
+  transition: transform 1000ms, opacity 500ms;
+}
+
+
+
