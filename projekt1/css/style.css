@@ -294,7 +294,7 @@ header nav ul li a:focus::before {
 img {
   margin: 0 auto;
   width: 100%;
-  max-width: var(--max-width2);
+  /* max-width: var(--max-width2); */
   aspect-ratio: 13 / 4;
 }
 
@@ -324,7 +324,7 @@ img {
 .swiper {
   margin: 0 auto;
   width: 100%;
-  max-width: var(--max-width2);
+  /* max-width: var(--max-width2); */
   aspect-ratio: 13 / 4;
 }
 div.swiper-slid {
@@ -456,7 +456,7 @@ section.legenda li.noPad {
   position: relative;
   width: 100%;
   padding: 3rem 0;
-  max-width: var(--max-width2);
+  /* max-width: var(--max-width2); */
 }
 
 .skos::after {

@@ -29,7 +29,7 @@
   --headerColor1Hover: white;
 
   --max-width1: 1200px;
-  --max-width2: 1400px;
+  --max-width2: 1800px;
   --max-width3: 2000px;
 }
 
@@ -90,6 +90,7 @@ header.scroll {
 
 header > nav {
   max-width: var(--max-width2);
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
