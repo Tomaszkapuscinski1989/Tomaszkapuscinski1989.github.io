@@ -1,0 +1,255 @@
+:root {
+  --headerFoterColor1: hsl(51, 100%, 50%);
+  --headerFoterColor1hover: hsl(255, 0%, 100%);
+  --headerFoterColor1Scroll: hsl(51, 100%, 50%);
+  --headerFoterColor1hoverScroll: hsl(255, 0%, 100%);
+
+  --firstLeter: hsl(51, 100%, 50%);
+
+  --textColor1: hsl(255, 0%, 100%);
+  --textColor2: hsl(0, 0%, 0%);
+  --textColor3: hsl(0, 0%, 30%);
+  --textColor3hover: hsl(255, 0%, 100%);
+
+  --text-Color1: hsl(51, 100%, 50%);
+  --text-Color2: hsl(51, 100%, 30%);
+  --text-Color3: hsl(0, 0%, 100%);
+
+  --backgroundColor1: hsl(217, 86%, 45%);
+  --backgroundColor1scroll: var(--backgroundColor1);
+  --backgroundColor1scrollBorder: hsl(217, 86%, 11%);
+  --backgroundColor1Kart: rgba(4, 23, 54, 0.7);
+  --backgroundColor2: hsl(202, 83%, 65%);
+
+  --font-family1: 'Libre Baskerville', serif;
+
+  --hamburgerBackground: white;
+  --menuLineColor: gold;
+  --headerColor1: black;
+  --headerColor1Hover: white;
+}
+
+.dark {
+  --headerFoterColor1: hsl(51, 100%, 50%);
+  --headerFoterColor1hover: hsl(255, 0%, 100%);
+  --headerFoterColor1Scroll: hsl(51, 100%, 50%);
+  --headerFoterColor1hoverScroll: hsl(255, 0%, 100%);
+
+  --firstLeter: hsl(51, 100%, 50%);
+
+  --textColor1: hsl(255, 0%, 100%);
+  --textColor2: hsl(0, 0%, 100%);
+  --textColor3: hsl(0, 0%, 70%);
+  --textColor3hover: hsl(255, 0%, 100%);
+
+  --text-Color1: hsl(51, 100%, 50%);
+  --text-Color2: hsl(51, 100%, 30%);
+  --text-Color3: hsl(0, 0%, 100%);
+
+  --backgroundColor1: hsl(217, 86%, 11%);
+  --backgroundColor1scroll: rgba(4, 23, 54, 0.7);
+  --backgroundColor1scrollBorder: transparent;
+  --backgroundColor1Kart: rgba(4, 23, 54, 0.7);
+  --backgroundColor2: rgb(1, 11, 28);
+
+  --font-family1: 'Libre Baskerville', serif;
+
+  --hamburgerBackground: white;
+  --menuLineColor: gold;
+  --headerColor1: black;
+  --headerColor1Hover: white;
+}
+
+.hiden {
+  display: none;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scrollPadding, 15rem);
+}
+
+body {
+  background-color: var(--backgroundColor2);
+  font-family: 'Libre Baskerville', serif;
+}
+
+:is(#wyk, #cer, #skill, #kon, #frontend, #info) h2 {
+  font-size: clamp(20px, 2.5vw, 30px);
+  color: var(--textColor2);
+  text-transform: uppercase;
+
+  font-family: var(--font-family1);
+  padding-bottom: clamp(20px, 2.5vw, 30px);
+  font-weight: 700;
+}
+
+:is(#wyk, #cer, #skill, #kon, #info) p {
+  font-size: clamp(14px, 2vw, 24px);
+  color: var(--textColor3);
+  line-height: 1.8;
+  text-align: center;
+}
+:is(#cer, #skill) li {
+  font-size: clamp(14px, 2vw, 24px);
+  list-style: none;
+  color: var(--textColor3);
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#cer ul li a {
+  font-size: clamp(20px, 2.5vw, 30px);
+  list-style: none;
+  text-decoration: none;
+  color: var(--textColor3);
+  text-transform: uppercase;
+  line-height: 1.8;
+  text-align: justify;
+  font-family: var(--font-family1);
+  transform: scale(1);
+  transition: color 500ms, transform 500ms;
+}
+
+:is(#wyk, #kon, #info) p::first-letter,
+:is(#cer, #skill) li::first-letter,
+:is(#cer, #skill) li a::first-letter {
+  font-size: clamp(20px, 2.5vw, 30px);
+  color: var(--firstLeter);
+}
+
+#frontend {
+  background: var(--backgroundColor1);
+}
+
+footer {
+  background: var(--backgroundColor1);
+  color: var(--headerFoterColor1Scroll);
+}
+
+footer :is(a, li) {
+  font-size: clamp(14px, 2vw, 24px);
+  color: var(--headerFoterColor1Scroll);
+  text-transform: uppercase;
+  font-family: var(--font-family1);
+  list-style: none;
+  text-decoration: none;
+  transform: scale(1);
+  line-height: 1.8;
+  transition: color 500ms, transform 500ms;
+}
+
+footer :is(li:hover, li:focus, a:hover, a:focus) {
+  color: var(--headerFoterColor1hover);
+  outline: transparent;
+  transform: scale(1.2);
+}
+
+footer hr {
+  border: 3px solid var(--headerFoterColor1);
+}
+
+footer small {
+  font-size: clamp(10px, 1.3vw, 15px);
+
+  font-family: var(--font-family1);
+}
+
+.aa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: clamp(12px, 1.6vw, 20px) 0;
+  font-size: clamp(14px, 2vw, 24px);
+  line-height: 1.7em;
+}
+
+.ac {
+  height: 100%;
+}
+
+.nav-link {
+  color: var(--headerFoterColor1);
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: clamp(1.4rem, 1.9vw, 2.5rem);
+  margin: 1em 0;
+  padding: 0.5em 0;
+  font-family: var(--font-family1);
+  text-align: center;
+  transition: transform 500ms, color 500ms, font-size 500ms;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  transform: scale(1.2);
+  color: var(--headerFoterColor1hover);
+  outline: transparent;
+}
+
+.nav-link:before {
+  content: '';
+  border-bottom: 3px solid var(--headerFoterColor1hover);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform ease 400ms;
+}
+
+.nav-link:hover::before,
+.nav-link:focus::before {
+  content: '';
+  transform: scaleX(1);
+}
+
+.ss {
+  background-color: var(--backgroundColor1) !important;
+}
+
+.navbar-brand i {
+  color: var(--headerFoterColor1);
+  font-size: clamp(1.6rem, 2.3vw, 3rem);
+  font-weight: 700;
+  transition: font-size 500ms, transform 500ms;
+}
+
+.navbar-brand :is(i:hover, i:focus) {
+  transform: scale(1.2);
+  color: var(--headerFoterColor1hover);
+  outline: transparent;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.carousel-item img {
+  width: 100%;
+  aspect-ratio: 17/4;
+}
+/* 
+.carousel-caption {
+  background-color: red;
+} */
+
+.carousel-caption h5 {
+  text-transform: uppercase;
+  font-size: clamp(29px, 4.2vw, 50px);
+  color: var(--text-Color1);
+  font-family: var(--font-family1);
+}
+
+.carousel-caption p {
+  font-size: clamp(20px, 2.5vw, 30px);
+  color: var(--text-Color1);
+}
