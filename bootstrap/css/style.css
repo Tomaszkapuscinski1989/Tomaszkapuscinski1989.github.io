@@ -253,3 +253,22 @@ footer small {
   font-size: clamp(20px, 2.5vw, 30px);
   color: var(--text-Color1);
 }
+
+div.card-body h5 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+div.card-body p {
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+div.card-body a {
+  font-size: 12px;
+  background-color: var(--backgroundColor1);
+  width: 100%;
+  padding: 1em;
+
+  line-height: 1.5;
+}
