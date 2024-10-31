@@ -3,6 +3,8 @@
 
 Aby przejść na stronę użyj tego ***[linku](https://tomaszkapuscinski1989.github.io/)***.
 
+![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+
 Pliki projektu napisanego we frameworku react dostępne są w osobnym ***[repozytorium](https://github.com/Tomaszkapuscinski1989/projekt_react)***
 
 ###### Znane problemy/ rzeczy do poprawienia:
