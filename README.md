@@ -3,7 +3,7 @@
 
 Aby przejść na stronę użyj tego ***[linku](https://tomaszkapuscinski1989.github.io/)***.
 
-![The San Juan Mountains are beautiful!](https://raw.githubusercontent.com/Tomaszkapuscinski1989/Tomaszkapuscinski1989.github.io/5256735f090646aeb7dfc9ff3ccba65b3ed17345/uca.svg "San Juan Mountains")
+ ![QR Code](https://raw.githubusercontent.com/Tomaszkapuscinski1989/Tomaszkapuscinski1989.github.io/5256735f090646aeb7dfc9ff3ccba65b3ed17345/uca.svg)
 
 Pliki projektu napisanego we frameworku react dostępne są w osobnym ***[repozytorium](https://github.com/Tomaszkapuscinski1989/projekt_react)***
 
