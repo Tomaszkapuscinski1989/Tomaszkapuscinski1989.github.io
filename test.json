@@ -1,18 +1,14 @@
 [
   {
     "id": 1,
-    "p1": "file1",
-    "p2": "File1"
+    "p1": "Znaczny stopień niepełnosprawności",
+    
   },
   {
     "id": 2,
-    "p1": "file2",
-    "p2": "File2"
+    "p1": "Znajomość język angielski: B1",
+    
   },
-  {
-    "id": 3,
-    "p1": "file3",
-    "p2": "File3"
-  }
+
 ]
 
