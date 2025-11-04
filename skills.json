@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "p1": "Znajomość na średnim poziomie języków programowania takich jak Python, JavaScript, Html, CSS, SQLite oraz bibliotek takich jak Bootstrap, SCSS, React, React Router"
+  },
+  {
+    "id": 2,
+    "p1": "Znajomość w stopniu średnim systemów opartych na jądrze Linux"
+  },
+  {
+    "id": 3,
+    "p1": "Znajomość pakietu MS Office"
+  },
+  {
+    "id": 4,
+    "p1": "Znajomość tematów z zakresu technologi światłowodowej, optoelektronicznej i laserowej"
+  },
+  {
+    "id": 5,
+    "p1": "Znajomość techniki montażu elementów stosowanych w elektronice"
+  },
+  {
+    "id": 6,
+    "p1": "Znajomość technik półprzewodnikowej, cienkowarstwowej oraz grubowarstwowej"
+  },
+  {
+    "id": 7,
+    "p1": "Znajomość zagadnień związanych z fotowoltaiką"
+  },
+  {
+    "id": 8,
+    "p1": "Znajomość zagadnień związanych z mikrosystemami typu MEMS i MEOMS"
+  },
+
+  {
+    "id": 9,
+    "p1": "Znajomość zasad rysunku technicznego"
+  }
+]
