@@ -17,7 +17,6 @@ body {
 
 header {
   width: 100%;
-  border: 4px solid white;
   background-color: var(--bg-color1);
   padding: 15px 0;
   nav {
@@ -273,6 +272,9 @@ main.cv {
           padding: 10px 10px;
 
           grid-area: h;
+          @media (width <1200) {
+            font-size: 2rem;
+          }
         }
         .pok {
           display: flex;
@@ -407,7 +409,6 @@ main.cv {
 }
 footer {
   width: 100%;
-  border: 4px solid white;
   display: flex;
   flex-direction: column;
   padding: 20px 0;
