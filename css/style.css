@@ -181,6 +181,9 @@ main.cv {
       url(/img/cv-img2.jpg);
     background-size: cover;
     mask-image: linear-gradient(var(--bg-color2) 60%, transparent);
+    @media (width <1200px) {
+      aspect-ratio: 3/1;
+    }
     h1 {
       font-size: 5rem;
       display: inline-block;
@@ -272,7 +275,7 @@ main.cv {
           padding: 10px 10px;
 
           grid-area: h;
-          @media (width <1200) {
+          @media (width <1200px) {
             font-size: 2rem;
           }
         }
