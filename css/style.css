@@ -29,10 +29,12 @@ header {
 
     @media (width < 1200px) {
       width: 100%;
+      padding: 5px 0;
     }
     a {
       color: var(--fg-color1);
       font-size: clamp(1rem, 2.5vw, 2rem);
+      font-weight: 500;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
@@ -56,6 +58,9 @@ main.home {
     background-size: cover;
     background-position: 30%;
     mask-image: linear-gradient(var(--bg-color2) 60%, transparent);
+    @media (width <1200px) {
+      aspect-ratio: 2/1;
+    }
     div {
       width: 80%;
       margin: 0 auto;
@@ -182,7 +187,7 @@ main.cv {
     background-size: cover;
     mask-image: linear-gradient(var(--bg-color2) 60%, transparent);
     @media (width <1200px) {
-      aspect-ratio: 3/1;
+      aspect-ratio: 2/1;
     }
     h1 {
       font-size: 5rem;
@@ -271,6 +276,7 @@ main.cv {
           text-transform: uppercase;
           letter-spacing: 1rem;
           font-weight: bold;
+          line-height: 3.5rem;
           background-color: var(--bg-color1);
           padding: 10px 10px;
 
@@ -449,11 +455,13 @@ footer {
 
         @media (width < 1200px) {
           width: 100%;
+          align-items: center;
+          justify-content: center;
         }
 
         a,
         p {
-          color: var(--fg-color3);
+          color: var(--fg-color1);
           padding: 10px 0;
           font-size: 2rem;
           font-weight: 500;
@@ -467,6 +475,7 @@ footer {
       letter-spacing: 0.1rem;
       font-size: 1rem;
       text-transform: uppercase;
+      font-weight: 500;
     }
   }
 }
