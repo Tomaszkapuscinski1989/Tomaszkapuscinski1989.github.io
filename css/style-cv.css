@@ -1,0 +1,254 @@
+@import '/css/color.css';
+
+main.cv {
+  .img {
+    width: 100%;
+    aspect-ratio: 5/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:
+      conic-gradient(hsl(from var(--bg-color2) h s l / 0.75) 0 0),
+      url(/img/cv-img2.jpg);
+    background-size: cover;
+    mask-image: linear-gradient(var(--bg-color2) 60%, transparent);
+    @media (width <1200px) {
+      aspect-ratio: 2/1;
+    }
+    h1 {
+      font-size: 5rem;
+      display: inline-block;
+      text-align: center;
+      color: var(--fg-color1);
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      line-height: 6rem;
+      font-weight: bold;
+
+      @media (width <1200px) {
+        font-size: clamp(2rem, 2.5vw, 3rem);
+      }
+    }
+    p {
+      text-align: center;
+      color: var(--fg-color1);
+      letter-spacing: 0.2rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+
+      @media (width <1200px) {
+        font-size: clamp(0.5rem, 1.2vw, 1rem);
+      }
+    }
+  }
+  .s1 {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    background-color: var(--bg-color2);
+    justify-content: space-around;
+    @media (width < 1200px) {
+      padding: 20px 1px;
+    }
+
+    a {
+      color: var(--fg-color1);
+      font-size: 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      @media (width < 1200px) {
+        font-size: 0.6rem;
+      }
+      &:hover,
+      &:focus-visible {
+        color: red;
+      }
+    }
+  }
+  .s2 {
+    width: 100%;
+    background-color: var(--bg-color3);
+    padding: 50px 0;
+    @media (width <1200px) {
+      padding: 20px 0;
+    }
+    div {
+      width: 1200px;
+      background-color: var(--bg-color3);
+      margin: 0 auto;
+      @media (width <1200px) {
+        width: 100%;
+      }
+
+      #Wykształcenie,
+      #Certyfikaty,
+      #Umiejętności,
+      #Kontakt,
+      #Informacje {
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas:
+          'h .'
+          '. c';
+        @media (width <1200px) {
+          grid-template-areas:
+            'h h'
+            'c c';
+        }
+
+        h4 {
+          font-size: 3rem;
+          display: inline-block;
+          text-align: center;
+          color: var(--fg-color1);
+          text-transform: uppercase;
+          letter-spacing: 1rem;
+          font-weight: bold;
+          line-height: 3.5rem;
+          background-color: var(--bg-color1);
+          padding: 10px 10px;
+
+          grid-area: h;
+          @media (width <1200px) {
+            font-size: 2rem;
+          }
+        }
+        .pok {
+          display: flex;
+          flex-direction: column;
+
+          width: 95%;
+          grid-area: c;
+          p {
+            text-align: justify;
+            color: var(--fg-color2);
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 2.5rem;
+            letter-spacing: 0.1rem;
+            padding: 10px;
+            border: 2px solid var(--fg-color1);
+            background-color: var(--bg-color1);
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 26px -5px var(--fg-color1);
+            @media (width <1200px) {
+              text-align: center;
+            }
+            &::after {
+              content: '';
+
+              border: 5px solid white;
+              border-radius: 0 0 0 12px;
+              border-top-color: transparent;
+              border-right-color: transparent;
+
+              position: absolute;
+              @media (width <1200px) {
+                border: 5px solid transparent;
+              }
+            }
+          }
+          a {
+            text-decoration: none;
+            color: var(--fg-color3);
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            letter-spacing: 0.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#Wykształcenie {
+  h4 {
+    anchor-name: --wh;
+  }
+  p {
+    anchor-name: --wp;
+    anchor-scope: --wp;
+    &::after {
+      content: '';
+
+      top: anchor(bottom --wh);
+      left: anchor(center --wh);
+      bottom: anchor(center --wp);
+      right: calc(anchor(left --wp));
+    }
+  }
+}
+#Certyfikaty {
+  h4 {
+    anchor-name: --ch;
+  }
+  p {
+    anchor-name: --cp;
+    anchor-scope: --cp;
+    &::after {
+      content: '';
+
+      top: anchor(bottom --ch);
+      left: anchor(center --ch);
+      bottom: anchor(center --cp);
+      right: anchor(left --cp);
+    }
+  }
+}
+#Umiejętności {
+  h4 {
+    anchor-name: --uh;
+  }
+  p {
+    anchor-name: --up;
+    anchor-scope: --up;
+    &::after {
+      content: '';
+
+      top: anchor(bottom --uh);
+      left: anchor(center --uh);
+      bottom: anchor(center --up);
+      right: anchor(left --up);
+    }
+  }
+}
+#Kontakt {
+  h4 {
+    anchor-name: --kh;
+  }
+  p {
+    anchor-name: --kp;
+    anchor-scope: --kp;
+    &::after {
+      content: '';
+
+      top: anchor(bottom --kh);
+      left: anchor(center --kh);
+      bottom: anchor(center --kp);
+      right: anchor(left --kp);
+    }
+  }
+}
+#Informacje {
+  h4 {
+    anchor-name: --ih;
+  }
+  p {
+    anchor-name: --ip;
+    anchor-scope: --ip;
+    &::after {
+      content: '';
+
+      top: anchor(bottom --ih);
+      left: anchor(center --ih);
+      bottom: anchor(center --ip);
+      right: anchor(left --ip);
+    }
+  }
+}

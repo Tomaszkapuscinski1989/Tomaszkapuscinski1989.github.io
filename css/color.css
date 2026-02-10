@@ -1,0 +1,22 @@
+:root {
+  font-size: 10px;
+  --bg-color1: hsl(0, 0%, 0%);
+  --bg-color2: hsl(0, 0%, 10%);
+  --bg-color3: hsl(0, 0%, 30%);
+
+  --fg-color1: hsl(0, 0%, 100%);
+  --fg-color2: hsl(0, 0%, 85%);
+  --fg-color3: hsl(0, 0%, 70%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+svg {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
