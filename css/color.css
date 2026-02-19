@@ -7,6 +7,8 @@
   --fg-color1: hsl(0, 0%, 100%);
   --fg-color2: hsl(0, 0%, 85%);
   --fg-color3: hsl(0, 0%, 70%);
+  --font-h: Arial, Helvetica, sans-serif;
+  --font-p: 'Times New Roman', serif;
 }
 
 body {
@@ -14,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 svg {

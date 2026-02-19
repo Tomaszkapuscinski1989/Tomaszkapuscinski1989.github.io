@@ -1,0 +1,46 @@
+const home_s3 = document.querySelector('.s3');
+const home_p = document.querySelector('.s3 p');
+const home_img = document.querySelector('.s3 img');
+
+// -------------------------------------------------------------
+const opt = {
+  root: null,
+  threshold: 1,
+  rootMargin: '50px 300px',
+};
+
+const obs = new IntersectionObserver(function (entries, obs) {
+  entries.forEach((en) => {
+    if (!en.isIntersecting) {
+      return;
+    }
+    console.log(en.target);
+    en.target.classList.remove('r1');
+    en.target.classList.add('r2');
+    obs.unobserve(en.target);
+  });
+}, opt);
+
+obs.observe(home_p);
+
+// -------------------------------------------------------------
+
+const opt2 = {
+  root: null,
+  threshold: 0,
+  // rootMargin: '0px 300px',
+};
+
+const obs2 = new IntersectionObserver(function (entries, obs) {
+  entries.forEach((en) => {
+    if (!en.isIntersecting) {
+      return;
+    }
+    console.log(en.target);
+    en.target.classList.remove('l1');
+    en.target.classList.add('l2');
+    obs.unobserve(en.target);
+  });
+}, opt2);
+
+obs2.observe(home_img);

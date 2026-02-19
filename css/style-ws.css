@@ -1,1 +1,128 @@
 @import '/css/color.css';
+
+section.s1 {
+  width: 100%;
+  aspect-ratio: 5/1;
+  background-image: url('/img/joao-amaral-OKnA-Wrkj-c-unsplash.jpg');
+  background-size: cover;
+  background-position: 50%;
+  padding: 5rem;
+  min-height: 70vh;
+  position: relative;
+}
+section.s1 .s1-mask {
+  position: absolute;
+  inset: 0;
+  /* background: rgb(0 0 0 / 0.5); */
+
+  mask: url('/img/joao-amaral-OKnA-Wrkj-c-unsplash2.png');
+  mask-position: 50%;
+  mask-size: cover;
+}
+.s1 h1 {
+  text-align: center;
+  font-size: clamp(4rem, 10vw + 0.5rem, 9rem);
+  font-family: var(--font-h);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 1rem;
+  color: var(--bg-color2);
+  margin: 50px;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  -webkit-text-stroke: 5px var(--fg-color1);
+}
+section.s2 {
+  width: 100%;
+  background-color: var(--bg-color2);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.s2r {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.s2r p {
+  width: 45%;
+  color: var(--fg-color2);
+  font-family: var(--font-p);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 4rem;
+  letter-spacing: 0.2rem;
+}
+.s2r img {
+  width: 40%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  mask-image: url('/img/wheelchair-svgrepo-com.svg');
+  mask-position: center;
+  mask-size: contain;
+}
+
+.s3 {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  background-color: var(--bg-color3);
+}
+.s3 h3,
+.s3 h4 {
+  font-size: 5rem;
+  display: inline-block;
+  text-align: center;
+  color: var(--fg-color1);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  line-height: 6rem;
+  padding: 1rem 0;
+  font-family: var(--font-h);
+  font-weight: bold;
+}
+.s4 {
+  width: 100%;
+  background-color: var(--bg-color2);
+  padding: 2rem 0;
+}
+.s4r {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.s4r p {
+  width: 45%;
+  color: var(--fg-color2);
+  font-family: var(--font-p);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 4rem;
+  letter-spacing: 0.2rem;
+}
+.mask-container {
+  position: relative;
+  width: 40%;
+}
+.mask-container img {
+  width: 100%;
+}
+
+.color-image {
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  background-image: url('/img/color.png');
+  background-size: cover;
+
+  mask-image: url('/img/mask.png');
+  mask-size: cover;
+  mask-position: 0% 0%;
+}

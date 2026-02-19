@@ -21,10 +21,11 @@ main.cv {
       display: inline-block;
       text-align: center;
       color: var(--fg-color1);
+      font-family: var(--font-h);
       text-transform: uppercase;
       letter-spacing: 1rem;
       line-height: 6rem;
-      font-weight: bold;
+      font-weight: 900;
 
       @media (width <1200px) {
         font-size: clamp(2rem, 2.5vw, 3rem);
@@ -33,8 +34,11 @@ main.cv {
     p {
       text-align: center;
       color: var(--fg-color1);
-      letter-spacing: 0.2rem;
+      font-family: var(--font-p);
       font-size: 2rem;
+      font-weight: 500;
+      line-height: 4rem;
+      letter-spacing: 0.2rem;
       text-transform: uppercase;
 
       @media (width <1200px) {
@@ -54,10 +58,14 @@ main.cv {
 
     a {
       color: var(--fg-color1);
-      font-size: 2rem;
       text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 0.1rem;
+      font-family: var(--font-p);
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 4rem;
+      letter-spacing: 0.2rem;
+      transition: color 500ms;
 
       @media (width < 1200px) {
         font-size: 0.6rem;
@@ -106,9 +114,10 @@ main.cv {
           display: inline-block;
           text-align: center;
           color: var(--fg-color1);
+          font-family: var(--font-h);
+          font-weight: 900;
           text-transform: uppercase;
           letter-spacing: 1rem;
-          font-weight: bold;
           line-height: 3.5rem;
           background-color: var(--bg-color1);
           padding: 10px 10px;
@@ -125,18 +134,20 @@ main.cv {
           width: 95%;
           grid-area: c;
           p {
-            text-align: justify;
+            text-align: left;
             color: var(--fg-color2);
-            font-size: 1.5rem;
+            font-family: var(--font-p);
+            font-size: 2rem;
             font-weight: 500;
-            line-height: 2.5rem;
-            letter-spacing: 0.1rem;
+            line-height: 3rem;
+            letter-spacing: 0.2rem;
             padding: 10px;
             border: 2px solid var(--fg-color1);
             background-color: var(--bg-color1);
             margin: 10px 0;
             border-radius: 10px;
             box-shadow: 0 0 26px -5px var(--fg-color1);
+
             @media (width <1200px) {
               text-align: center;
             }
@@ -156,10 +167,12 @@ main.cv {
           }
           a {
             text-decoration: none;
-            color: var(--fg-color3);
-            font-size: 1.5rem;
-            line-height: 2.5rem;
-            letter-spacing: 0.1rem;
+            color: var(--fg-color1);
+            font-family: var(--font-p);
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 4rem;
+            letter-spacing: 0.2rem;
           }
         }
       }
