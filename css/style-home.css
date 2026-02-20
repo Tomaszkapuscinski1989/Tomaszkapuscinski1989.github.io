@@ -176,3 +176,38 @@ main.home {
   opacity: 1;
   transform: scale(1);
 }
+
+.lewo {
+  animation: sl 2s forwards;
+}
+.prawo {
+  animation: sp 2s forwards;
+}
+
+@keyframes sl {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes sp {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

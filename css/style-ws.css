@@ -57,6 +57,9 @@ section.s2 {
   font-weight: 500;
   line-height: 4rem;
   letter-spacing: 0.2rem;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 .s2r img {
   width: 40%;
@@ -65,6 +68,9 @@ section.s2 {
   mask-image: url('/img/wheelchair-svgrepo-com.svg');
   mask-position: center;
   mask-size: contain;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 
 .s3 {
@@ -106,6 +112,9 @@ section.s2 {
   font-weight: 500;
   line-height: 4rem;
   letter-spacing: 0.2rem;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 .mask-container {
   position: relative;
@@ -125,4 +134,22 @@ section.s2 {
   mask-image: url('/img/mask.png');
   mask-size: cover;
   mask-position: 0% 0%;
+}
+
+.r1 {
+  transform: translateX(50rem);
+  opacity: 0;
+}
+.r2 {
+  opacity: 1;
+  transform: translateX(0rem);
+}
+
+.l1 {
+  transform: translateX(-50rem);
+  opacity: 0;
+}
+.l2 {
+  opacity: 1;
+  transform: translateX(0rem);
 }
