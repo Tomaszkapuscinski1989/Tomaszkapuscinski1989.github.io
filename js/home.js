@@ -6,7 +6,7 @@ const home_img = document.querySelector('.s3 img');
 const opt = {
   root: null,
   threshold: 1,
-  rootMargin: '50px 300px',
+  rootMargin: '50px 6000px',
 };
 
 const obs = new IntersectionObserver(function (entries, obs) {
@@ -14,7 +14,6 @@ const obs = new IntersectionObserver(function (entries, obs) {
     if (!en.isIntersecting) {
       return;
     }
-    console.log(en.target);
     en.target.classList.remove('r1');
     en.target.classList.add('r2');
     obs.unobserve(en.target);
@@ -36,7 +35,6 @@ const obs2 = new IntersectionObserver(function (entries, obs) {
     if (!en.isIntersecting) {
       return;
     }
-    console.log(en.target);
     en.target.classList.remove('l1');
     en.target.classList.add('l2');
     obs.unobserve(en.target);

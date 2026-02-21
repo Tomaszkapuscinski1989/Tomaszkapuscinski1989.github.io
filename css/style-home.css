@@ -98,6 +98,7 @@ main.home {
     }
     p {
       text-decoration: none;
+      text-align: center;
       font-family: var(--font-p);
       color: var(--fg-color1);
       text-transform: uppercase;
