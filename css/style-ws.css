@@ -9,6 +9,10 @@ section.s1 {
   padding: 5rem;
   min-height: 70vh;
   position: relative;
+  @media (width <1200px) {
+    aspect-ratio: 1/1;
+    min-height: 1vh;
+  }
 }
 section.s1 .s1-mask {
   position: absolute;
@@ -27,7 +31,7 @@ section.s1 .s1-mask {
   line-height: 1;
   letter-spacing: 1rem;
   color: var(--bg-color2);
-  margin: 50px;
+  margin: 50px 0;
   text-transform: uppercase;
   position: fixed;
   width: 100%;
@@ -36,7 +40,7 @@ section.s1 .s1-mask {
 section.s2 {
   width: 100%;
   background-color: var(--bg-color2);
-
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -46,9 +50,16 @@ section.s2 {
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (width < 1200px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
+
 .s2r p {
   width: 45%;
   color: var(--fg-color2);
@@ -60,6 +71,11 @@ section.s2 {
   transition:
     transform 1s,
     opacity 1s;
+  @media (width < 1200px) {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 .s2r img {
   width: 40%;
@@ -71,6 +87,9 @@ section.s2 {
   transition:
     transform 1s,
     opacity 1s;
+  @media (width < 1200px) {
+    width: 60%;
+  }
 }
 
 .s3 {
@@ -91,18 +110,27 @@ section.s2 {
   padding: 1rem 0;
   font-family: var(--font-h);
   font-weight: bold;
+  @media (width <1200px) {
+    font-size: 3rem;
+  }
 }
 .s4 {
   width: 100%;
   background-color: var(--bg-color2);
-  padding: 2rem 0;
+  padding: 2rem 2rem;
 }
 .s4r {
   width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (width < 1200px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .s4r p {
   width: 45%;
@@ -115,10 +143,16 @@ section.s2 {
   transition:
     transform 1s,
     opacity 1s;
+
+  @media (width < 1200px) {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 .mask-container {
   position: relative;
-  width: 40%;
+  width: 100%;
 }
 .mask-container img {
   width: 100%;

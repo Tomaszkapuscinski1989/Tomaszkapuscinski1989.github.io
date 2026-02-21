@@ -6,7 +6,7 @@ const home_p2 = document.querySelector('.s4r p');
 const opt = {
   root: null,
   threshold: 1,
-  // rootMargin: '50px 300px',
+  rootMargin: '50px 3000px',
 };
 
 const obs = new IntersectionObserver(function (entries, obs) {
@@ -27,7 +27,7 @@ obs.observe(home_p);
 const opt2 = {
   root: null,
   threshold: 1,
-  // rootMargin: '0px 300px',
+  rootMargin: '0px 3000px',
 };
 
 const obs2 = new IntersectionObserver(function (entries, obs) {
@@ -47,7 +47,7 @@ obs2.observe(home_img);
 const opt3 = {
   root: null,
   threshold: 1,
-  rootMargin: '50px 300px',
+  rootMargin: '50px 3000px',
 };
 
 const obs3 = new IntersectionObserver(function (entries, obs) {
