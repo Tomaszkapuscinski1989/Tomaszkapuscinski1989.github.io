@@ -42,7 +42,7 @@ main.cv {
       text-transform: uppercase;
 
       @media (width <1200px) {
-        font-size: clamp(0.5rem, 1.2vw, 1rem);
+        font-size: clamp(1rem, 1.5vw, 2rem);
       }
     }
   }
@@ -182,7 +182,9 @@ main.cv {
               border-right-color: transparent;
               position: absolute;
               z-index: 1000;
-              
+              @media (width <1200px) {
+              z-index: -1;
+            }
             }}
             
             &::after {
