@@ -1,4 +1,4 @@
-# Repozytorium to hostuje stronę zawierającą portfolio napisane z użyciem React 18, React Router oraz SCSS. 
+# Repozytorium to hostuje stronę napisaną w html
 
 
 Aby przejść na stronę użyj tego ***[linku](https://tomaszkapuscinski1989.github.io/)***.
