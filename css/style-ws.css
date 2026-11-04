@@ -64,7 +64,7 @@ section.s2 {
   width: 45%;
   color: var(--fg-color2);
   font-family: var(--font-p);
-  font-size: 2rem;
+  font-size: clamp(2rem, 2.0vw, 3rem);
   font-weight: 500;
   line-height: 4rem;
   letter-spacing: 0.2rem;
