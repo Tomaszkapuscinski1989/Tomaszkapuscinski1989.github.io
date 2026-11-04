@@ -18,40 +18,37 @@ header {
     }
     a {
       color: var(--fg-color1);
+      background-color: transparent;
       font-size: clamp(1rem, 2.5vw, 2rem);
-      padding: 0.5rem;
+      padding: 2rem;
       font-weight: 500;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
+      border:2px solid var(--fg-color1) ;
+      border-radius: 50px;
+      box-shadow: none;
       transition:
-        transform 500ms,
+        /* transform 500ms, */
+        border 500ms,
+        background-color 500ms,
+        box-shadow 500ms,
         color 500ms;
+
       &:hover,
       &:focus-visible {
-        color: red;
-        transform: scale(1.2);
+        color: var(--bg-color1);
+        background-color: var(--fg-color4);
+        border:2px solid var(--fg-color4);
+        box-shadow: 0 0 26px 5px var(--fg-color4);
+
+        /* transform: scale(1.2); */
         outline: transparent;
       }
 
-      &::before {
-        content: '';
-        border-bottom: 3px solid red;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transform: scaleX(0);
-        transform-origin: center;
-        transition: transform ease 400ms;
-      }
-      &:hover::before,
-      &:focus-visible::before {
-        content: '';
-        transform: scaleX(1);
-      }
-    }
+      
+      
+    } 
   }
 }
 
@@ -102,18 +99,49 @@ footer {
         a,
         p {
           color: var(--fg-color1);
-          padding: 10px 0;
+          padding: 1rem;
+          margin: .5rem;
           font-family: var(--font-p);
           font-size: 2rem;
           font-weight: 500;
           line-height: 4rem;
           letter-spacing: 0.2rem;
           text-decoration: none;
+          transition: color 1200ms;
+          &:hover{
+          color: var(--fg-color4);
+        }
+        }
+        
+        a.nav-item{
+          position: relative;
+          border: 2px solid transparent;
+          border-radius: 50px;
+          /* &:hover{
+            border: 2px solid #FFAC41;
+          } */
+          & .deco{
+            position: absolute;
+            offset-path: border-box;
+            width: 10px;
+            aspect-ratio: 1;
+            background: var(--fg-color4);
+            opacity: 0;
+            filter: blur(3px);
+            offset-distance: 5%;
+            border-radius: 50%;
+            transition: opacity 100ms,
+            offset-distance 1000ms;
+          }
+          &:hover .deco{
+            offset-distance: 75%;
+            opacity: 1;
+          }
         }
       }
     }
     small {
-      color: gold;
+      color: var(--fg-color4);
       font-family: var(--font-p);
       font-size: 1.5rem;
       font-weight: 500;

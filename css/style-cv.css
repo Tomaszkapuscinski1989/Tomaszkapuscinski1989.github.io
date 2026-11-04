@@ -65,14 +65,16 @@ main.cv {
       font-weight: 500;
       line-height: 4rem;
       letter-spacing: 0.2rem;
-      transition: color 500ms;
+      transform: scale(1) ;
+      transition: transform 500ms,color 500ms;
 
       @media (width < 1200px) {
         font-size: 0.6rem;
       }
       &:hover,
       &:focus-visible {
-        color: red;
+        color:var(--fg-color4);
+        transform: scale(1.2) ;
       }
     }
   }
@@ -110,6 +112,7 @@ main.cv {
         }
 
         h4 {
+          position: relative;
           font-size: 3rem;
           display: inline-block;
           text-align: center;
@@ -121,8 +124,19 @@ main.cv {
           line-height: 3.5rem;
           background-color: var(--bg-color1);
           padding: 10px 10px;
-
+          box-shadow: none;
           grid-area: h;
+          transition:
+        color 500ms,
+        box-shadow 500ms,
+        background-color 500ms;
+
+          &:has(~ div.pok > p:hover){
+            color: var(--bg-color1) ;
+            background-color: var(--fg-color1);  
+                  box-shadow: 0 0 26px 10px var(--fg-color1);          
+          }   
+           
           @media (width <1200px) {
             font-size: 2rem;
           }
@@ -146,15 +160,35 @@ main.cv {
             background-color: var(--bg-color1);
             margin: 10px 0;
             border-radius: 10px;
-            box-shadow: 0 0 26px -5px var(--fg-color1);
+            box-shadow: none;
+            transition:
+        color 500ms,
+        box-shadow 500ms,
+        background-color 500ms;
 
             @media (width <1200px) {
               text-align: center;
             }
+            &:hover,
+      &:focus-visible{
+        color: var(--bg-color1);
+        background-color: var(--fg-color1);
+              box-shadow: 0 0 26px 5px var(--fg-color1);
+            &::after {
+              content: '';
+              border: 5px solid var(--fg-color4);
+              border-radius: 0 0 0 12px;
+              border-top-color: transparent;
+              border-right-color: transparent;
+              position: absolute;
+              z-index: 1000;
+              
+            }}
+            
             &::after {
               content: '';
 
-              border: 5px solid white;
+              border: 5px solid var(--fg-color1);
               border-radius: 0 0 0 12px;
               border-top-color: transparent;
               border-right-color: transparent;
@@ -168,11 +202,23 @@ main.cv {
           a {
             text-decoration: none;
             color: var(--fg-color1);
+            background-color:transparent;
             font-family: var(--font-p);
             font-size: 2rem;
             font-weight: 500;
             line-height: 4rem;
             letter-spacing: 0.2rem;
+            box-shadow: none;
+            transition:
+        color 500ms,
+        box-shadow 500ms,
+        background-color 500ms;
+            &:hover,
+      &:focus-visible{
+        color: var(--bg-color1);
+        background-color: var(--fg-color1);
+              box-shadow: 0 0 26px 5px var(--fg-color1);
+      }
           }
         }
       }
@@ -265,3 +311,4 @@ main.cv {
     }
   }
 }
+
