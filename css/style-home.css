@@ -140,25 +140,33 @@ main.home {
           transform 1s,
           opacity 1s;
       }
-      p {
-        width: 40%;
-        font-family: var(--font-p);
-        text-align: justify;
-        color: var(--fg-color1);
-        font-size: 2rem;
-        font-weight: 500;
-        line-height: 4rem;
-        letter-spacing: 0.2rem;
-        transition:
+      div.r3{
+ width: 40%;       
+        display: flex;
+        flex-direction: column;
+        
+      
+        p {
+          width: 100%;
+          margin: 1.5rem 0;
+          font-family: var(--font-p);
+          text-align: center;
+          color: var(--fg-color1);
+          font-size: 2rem;
+          font-weight: 500;
+          line-height: 4rem;
+          letter-spacing: 0.2rem;
+          transition:
           transform 1s,
           opacity 1s;
-
-        @media (width < 1200px) {
-          width: 100%;
-          margin-top: 10px;
-        }
-      }
-    }
+          
+          @media (width < 1200px) {
+            width: 100%;
+            margin-top: 10px;
+            }
+            }
+          }
+          }
   }
 }
 .r1 {
