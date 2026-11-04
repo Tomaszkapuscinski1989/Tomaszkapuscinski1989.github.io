@@ -173,6 +173,9 @@ section.s2 {
 .r1 {
   transform: translateX(50rem);
   opacity: 0;
+  @media (width <1200px) {
+      transform: translateX(-200px);
+    }
 }
 .r2 {
   opacity: 1;
@@ -182,6 +185,9 @@ section.s2 {
 .l1 {
   transform: translateX(-50rem);
   opacity: 0;
+  @media (width <1200px) {
+      transform: translateX(-200px);
+    }
 }
 .l2 {
   opacity: 1;

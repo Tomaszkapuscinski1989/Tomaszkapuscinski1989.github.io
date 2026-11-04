@@ -3,6 +3,7 @@
 main.home {
   width: 100%;
   margin: 0 auto;
+  /* overflow-x: hidden; */
   .s1 {
     width: 100%;
     aspect-ratio: 5/1;
@@ -161,8 +162,11 @@ main.home {
   }
 }
 .r1 {
-  transform: translateX(-50rem);
+  transform: translateX(-2000rem);
   opacity: 0;
+  @media (width <1200px) {
+      transform: translateX(-50px);
+    }
 }
 .r2 {
   opacity: 1;
@@ -181,10 +185,15 @@ main.home {
 
 .lewo {
   animation: sl 2s forwards;
-  
+  @media (width <1200px) {
+      animation: s1l 2s forwards;
+    }
 }
 .prawo {
   animation: sp 2s forwards;
+  @media (width <1200px) {
+      animation: s1p 2s forwards;
+    }
 }
 
 @keyframes sl {
@@ -201,10 +210,38 @@ main.home {
   }
 }
 
+@keyframes s1l {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @keyframes sp {
   0% {
     opacity: 0;
     transform: translateX(2000px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes s1p {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
   }
   50% {
     opacity: 0;
